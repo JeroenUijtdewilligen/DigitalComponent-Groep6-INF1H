@@ -1,5 +1,5 @@
 
-import RepeatHulp
+import RepeatHulp, Menu
 
 def setup():
     #setting up some values
@@ -9,3 +9,4 @@ def setup():
     
 def draw():
     RepeatHulp.draw()
+    
