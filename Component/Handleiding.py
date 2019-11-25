@@ -26,7 +26,7 @@ def mousePressed():
     return scene
 def draw():
     global nextPageArrow, returnArrow, page, font, logo
-
+    stroke(0)
     background(255)
     
     textFont(font, 25)
