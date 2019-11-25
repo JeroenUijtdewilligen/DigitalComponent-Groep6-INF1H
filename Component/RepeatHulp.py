@@ -2,7 +2,7 @@
 def setup():
     
     global repeat1, repeat2, repeat3, font, output, scene
-    font = createFont("Couture", 32)
+    font = createFont("couture.otf", 32)
     #variables
     repeat3 = 0
     repeat2 = 0

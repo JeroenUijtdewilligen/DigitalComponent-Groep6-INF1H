@@ -5,8 +5,13 @@ import random
 import functions as f
 import temp as t
 from pprint import pprint
-start = time.time()
+
 def setup():
+    global time, start, font
+
+    start = timer.start_time()
+    font = createFont("Arial", 32)
+    textFont(font)
     frameRate(1)
     global start, event,event_times,time,pause, i, j, bit, scene
     #timer word gestart
@@ -19,7 +24,7 @@ def setup():
     scene = "SpelSpelen"
     
 def draw():
-    global start, event,event_times,time,pause, i, j, bit
+    global start, event,event_times,time,pause, i, j, bit, font
     background(230)
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
     if pause == False:
@@ -36,7 +41,7 @@ def draw():
     t.draw()      
     #f.draw(i, j)
 
-    textFont(createFont("Arial", 32))
+    textFont(font)
     textAlign(CENTER)
     #er word gekeken of er tijd is voor een event            
     if bit:

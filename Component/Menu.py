@@ -3,8 +3,8 @@ def setup():
     global achtergrond, x, y, font, imgboek, scene
     achtergrond = loadImage("Achtergrond.png")
     imgboek = loadImage("Book.png")
-    font = createFont("Couture", 144)
-    smallfont = createFont("Couture", 22)
+    font = createFont("couture.otf", 144)
+
     x = 0
     y = 0
     scene = "Menu"
@@ -61,9 +61,8 @@ def mousePressed():
     if 110 < mouseX < 360 and 250 < mouseY < 350:
         scene = "SpelSpelen"
         SpelSpelen.setup()
-        return scene
     if 110 < mouseX < 360 and 400 < mouseY < 500:
         scene = "RepeatHulp"
-        return scene
-    else:
-        return scene
+    if 110 < mouseX < 360 and 550 < mouseY < 650:
+        scene = "Handleiding"
+    return scene

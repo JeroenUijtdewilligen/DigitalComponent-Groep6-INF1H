@@ -42,6 +42,6 @@ def time_convert(sec):
   hours = mins // 60
   mins = mins % 60
               
-  return "Time Lapsed = {0}:{1}:{2}".format(int(hours),int(mins),sec)
+  return "Time Lapsed = " + str(hours) + ":" + str(mins) + ":" + str(sec)
 
     

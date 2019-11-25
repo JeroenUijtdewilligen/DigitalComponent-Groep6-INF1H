@@ -1,4 +1,4 @@
-import Menu, RepeatHulp, SpelSpelen, functions, temp,time
+import Menu, RepeatHulp, SpelSpelen, functions, temp,time, Handleiding
 
 def setup():
     #setting up some values
@@ -8,7 +8,7 @@ def setup():
     scene = "Menu"
     RepeatHulp.setup()
     Menu.setup()
-    
+    Handleiding.setup()
 def draw():
     global scene
     if scene == "Menu":
@@ -16,7 +16,9 @@ def draw():
     if scene == "RepeatHulp":
         RepeatHulp.draw()
     if scene == "SpelSpelen":
-        SpelSpelen.draw()    
+        SpelSpelen.draw()   
+    if scene == "Handleiding":
+        Handleiding.draw() 
 def mousePressed():
     global scene
     if scene == "Menu":
@@ -25,3 +27,5 @@ def mousePressed():
         scene = RepeatHulp.mousePressed()
     if scene == "SpelSpelen":
         scene = SpelSpelen.mousePressed()
+    if scene == "Handleiding":
+        scene = Handleiding.mousePressed()
