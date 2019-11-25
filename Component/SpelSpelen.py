@@ -1,15 +1,15 @@
 #alle libarys worden ingeladen
 import time
+import timer 
 import random
 import functions as f
 import temp as t
 from pprint import pprint
-
+start = time.time()
 def setup():
     frameRate(1)
     global start, event,event_times,time,pause, i, j, bit, scene
     #timer word gestart
-    start = time.time()
     i = 200
     j = 150
     bit = [] 

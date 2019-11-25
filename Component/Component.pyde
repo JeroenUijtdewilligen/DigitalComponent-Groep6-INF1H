@@ -1,8 +1,8 @@
-import Menu, RepeatHulp, SpelSpelen, functions, temp
+import Menu, RepeatHulp, SpelSpelen, functions, temp,time
 
 def setup():
     #setting up some values
-    global scene
+    global scene,start
     size(1280, 720)
 
     scene = "Menu"
