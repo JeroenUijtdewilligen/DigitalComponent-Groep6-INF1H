@@ -1,3 +1,4 @@
+
 import Menu, RepeatHulp, SpelSpelen, functions, temp,time, Handleiding
 
 def setup():
@@ -29,3 +30,4 @@ def mousePressed():
         scene = SpelSpelen.mousePressed()
     elif scene == "Handleiding":
         scene = Handleiding.mousePressed()
+

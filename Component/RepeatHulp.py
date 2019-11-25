@@ -3,12 +3,15 @@ def setup():
     
     global repeat1, repeat2, repeat3, font, output, scene
     font = createFont("couture.otf", 32)
+
     #variables
     repeat3 = 0
     repeat2 = 0
     repeat1 = 0
     output = 0
+
     scene = "RepeatHulp"
+
 def draw():
     
     global repeat1, repeat2, repeat3, font, output
@@ -19,9 +22,10 @@ def draw():
     #nice graphic stuff
     background(240)
     strokeWeight(5)
+
     line(0, 600, 1280, 600)
     line(0, 525, 1280, 525)
-    
+
     #text
     fill(0)
     textFont(font)
@@ -42,7 +46,7 @@ def draw():
     rect(110, 630, 60, 60)
     rect(310, 630, 60, 60)
     rect(510, 630, 60, 60)
-    
+
     #back box
     noFill()
     rect(1210, 650, 50, 50)
@@ -94,4 +98,3 @@ def mousePressed():
         return scene
     else:
         return scene
-    
