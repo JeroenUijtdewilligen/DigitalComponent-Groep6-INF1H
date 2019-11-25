@@ -61,8 +61,12 @@ def mousePressed():
     if 110 < mouseX < 360 and 250 < mouseY < 350:
         scene = "SpelSpelen"
         SpelSpelen.setup()
-    if 110 < mouseX < 360 and 400 < mouseY < 500:
+        return scene
+    elif 110 < mouseX < 360 and 400 < mouseY < 500:
         scene = "RepeatHulp"
-    if 110 < mouseX < 360 and 550 < mouseY < 650:
+        return scene
+    elif 110 < mouseX < 360 and 550 < mouseY < 650:
         scene = "Handleiding"
-    return scene
+        return scene
+    else:
+        return scene

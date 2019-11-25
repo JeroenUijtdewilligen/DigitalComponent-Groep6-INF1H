@@ -23,7 +23,9 @@ def mousePressed():
         page -= 1
     if isMouseWithinSpace(20, 650, 50, 50):
         scene = "Menu"
-    return scene
+        return scene
+    else:
+        return scene
 def draw():
     global nextPageArrow, returnArrow, page, font, logo
     stroke(0)

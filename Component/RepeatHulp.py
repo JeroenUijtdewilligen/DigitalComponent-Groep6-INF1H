@@ -91,6 +91,7 @@ def mousePressed():
     
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         scene = "Menu"
-    
-    return scene
+        return scene
+    else:
+        return scene
     

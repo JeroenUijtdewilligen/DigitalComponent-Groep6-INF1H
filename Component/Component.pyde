@@ -13,19 +13,19 @@ def draw():
     global scene
     if scene == "Menu":
         Menu.draw()
-    if scene == "RepeatHulp":
+    elif scene == "RepeatHulp":
         RepeatHulp.draw()
-    if scene == "SpelSpelen":
+    elif scene == "SpelSpelen":
         SpelSpelen.draw()   
-    if scene == "Handleiding":
+    elif scene == "Handleiding":
         Handleiding.draw() 
 def mousePressed():
     global scene
     if scene == "Menu":
         scene = Menu.mousePressed()
-    if scene == "RepeatHulp":
+    elif scene == "RepeatHulp":
         scene = RepeatHulp.mousePressed()
-    if scene == "SpelSpelen":
+    elif scene == "SpelSpelen":
         scene = SpelSpelen.mousePressed()
-    if scene == "Handleiding":
+    elif scene == "Handleiding":
         scene = Handleiding.mousePressed()
