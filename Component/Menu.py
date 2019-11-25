@@ -1,4 +1,4 @@
-import SpelSpelen
+import SpelSpelen, RepeatHulp, Handleiding
 def setup():
     global achtergrond, x, y, font, imgboek, scene
     achtergrond = loadImage("Achtergrond.png")
@@ -64,9 +64,11 @@ def mousePressed():
         return scene
     elif 110 < mouseX < 360 and 400 < mouseY < 500:
         scene = "RepeatHulp"
+        RepeatHulp.setup()
         return scene
     elif 110 < mouseX < 360 and 550 < mouseY < 650:
         scene = "Handleiding"
+        Handleiding.setup()
         return scene
     else:
         return scene
