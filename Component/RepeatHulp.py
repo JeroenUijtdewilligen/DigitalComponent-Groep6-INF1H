@@ -2,10 +2,7 @@
 def setup():
     
     global repeat1, repeat2, repeat3, font, output
-    
-    #setting up some values
     font = createFont("Couture", 32)
-    
     #variables
     repeat3 = 0
     repeat2 = 0
@@ -22,8 +19,8 @@ def draw():
     #nice graphic stuff
     background(240)
     strokeWeight(5)
-    line(0, 600, 1080, 600)
-    line(0, 525, 1080, 525)
+    line(0, 600, 1280, 600)
+    line(0, 525, 1280, 525)
     
     #text
     fill(0)
@@ -45,7 +42,7 @@ def draw():
     rect(110, 630, 60, 60)
     rect(310, 630, 60, 60)
     rect(510, 630, 60, 60)
-
+    
 def mousePressed():
     
     global repeat1, repeat2, repeat3
@@ -86,4 +83,4 @@ def mousePressed():
     if 510 < mouseX < 570 and 630 < mouseY < 690:
         repeat1 -= 1
         if repeat1 < 0:
-            repeat1 = 3
+            repeat1 = 3    

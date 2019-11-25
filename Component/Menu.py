@@ -1,7 +1,57 @@
 
 def setup():
-    #setting up some values
-    font = createFont("Couture", 32)
+    global achtergrond, x, y, font
+    achtergrond = loadImage("Achtergrond.png")
+    font = createFont("Couture", 144)
+    smallfont = createFont("Couture", 22)
+    x = 0
+    y = 0
+    scene = "Menu"
     
 def draw():
-    print()
+    global achtergrond, x, y, font, scene
+    
+    #sliding Background
+    image(achtergrond, x, y)
+    x -= 1
+    if x == -1280:
+        x = 0 
+    
+    #tekst Bitflip
+    textAlign(LEFT)
+    textFont(font)
+    fill(0)
+    strokeWeight(3)
+    stroke(0)
+    text("BitFlip!", 50, 200)
+    
+    fill(255)
+    strokeWeight(5)
+    stroke(0)
+    if 110 < mouseX < 360 and 250 < mouseY < 350:
+        stroke(150)
+    rect(110, 250, 250, 100)
+    
+    fill(255)
+    strokeWeight(5)
+    stroke(0)
+    if 110 < mouseX < 360 and 400 < mouseY < 500:
+        stroke(150)
+    rect(110, 400, 250, 100)
+    
+    fill(255)
+    strokeWeight(5)
+    stroke(0)
+    if 110 < mouseX < 360 and 550 < mouseY < 650:
+        stroke(150)
+    rect(110, 550, 250, 100)
+    
+    fill(0)
+    textFont(font, 22)
+    textAlign(CENTER)
+    text("Spel Starten", 235, 310)
+    text("Repeat Hulp", 235, 460)
+    text("Handleiding", 235, 610)
+    
+
+    
