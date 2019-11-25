@@ -1,4 +1,4 @@
-
+import SpelSpelen
 def setup():
     global achtergrond, x, y, font, imgboek, scene
     achtergrond = loadImage("Achtergrond.png")
@@ -10,6 +10,7 @@ def setup():
     scene = "Menu"
     
 def draw():
+    frameRate(60)
     global achtergrond, x, y, font, scene
     
     #sliding Background
@@ -57,6 +58,10 @@ def draw():
     
 def mousePressed():
     global scene
+    if 110 < mouseX < 360 and 250 < mouseY < 350:
+        scene = "SpelSpelen"
+        SpelSpelen.setup()
+        return scene
     if 110 < mouseX < 360 and 400 < mouseY < 500:
         scene = "RepeatHulp"
         return scene
