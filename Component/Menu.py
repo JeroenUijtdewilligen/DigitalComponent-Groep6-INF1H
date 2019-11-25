@@ -1,7 +1,8 @@
 
 def setup():
-    global achtergrond, x, y, font
+    global achtergrond, x, y, font, imgboek, scene
     achtergrond = loadImage("Achtergrond.png")
+    imgboek = loadImage("Book.png")
     font = createFont("Couture", 144)
     smallfont = createFont("Couture", 22)
     x = 0
@@ -44,6 +45,7 @@ def draw():
     stroke(0)
     if 110 < mouseX < 360 and 550 < mouseY < 650:
         stroke(150)
+        image(imgboek, 400, 500)
     rect(110, 550, 250, 100)
     
     fill(0)
@@ -53,5 +55,10 @@ def draw():
     text("Repeat Hulp", 235, 460)
     text("Handleiding", 235, 610)
     
-
-    
+def mousePressed():
+    global scene
+    if 110 < mouseX < 360 and 400 < mouseY < 500:
+        scene = "RepeatHulp"
+        return scene
+    else:
+        return scene
