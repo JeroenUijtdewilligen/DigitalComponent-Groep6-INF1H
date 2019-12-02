@@ -54,7 +54,7 @@ def draw():
     textAlign(CENTER)
     text("Spel Starten", 235, 310)
     text("Repeat Hulp", 235, 460)
-    text("Handleiding", 235, 610)
+    text("Tutorial", 235, 610)
     
 def mousePressed():
     global scene
