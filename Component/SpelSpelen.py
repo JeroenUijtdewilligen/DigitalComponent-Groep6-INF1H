@@ -16,6 +16,7 @@ def setup():
     font = createFont("Arial", 32)
     textFont(font)
     frameRate(1)
+    strokeWeight(5)
     global start, event,event_times,time,pause, i, j, bit, scene
     #timer word gestart
     i = 200
@@ -30,6 +31,7 @@ def draw():
     global start, event,event_times,time,pause, i, j, bit, font,p1,p2,p3,p4
     background(230)
     fill(230)
+    strokeWeight(5)
     stroke(0)
     square(900, 200, 80)
     image(p4, 845, 215, 40, 40)
