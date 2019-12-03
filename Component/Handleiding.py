@@ -5,6 +5,15 @@ def setup():
     nextPageArrow = loadImage("nextPageArrow.png")
     returnArrow = loadImage("returnArrow.png")
     logo = loadImage("Logo.jpg")
+    nextPageArrow = loadImage("handleiding/nextPageArrow.png")
+    returnArrow = loadImage("handleiding/returnArrow.png")
+    bitflip0 = loadImage("handleiding/Bitflip0.png")
+    bitflip1 = loadImage("handleiding/Bitflip1.png")
+    bitflip2 = loadImage("handleiding/Bitflip2.png")
+    bitflipX = loadImage("handleiding/BitflipX.png")
+    repeatHulp0 = loadImage("handleiding/repeatHulp0.png")
+    repeatHulp1 = loadImage("handleiding/repeatHulp1.png")
+    repeatHulp2 = loadImage("handleiding/repeatHulp2.png")
     font = loadFont("ArialMT-48.vlw")
     page = 1
     scene = "Handleiding"
