@@ -30,4 +30,3 @@ def mousePressed():
         scene = SpelSpelen.mousePressed()
     elif scene == "Handleiding":
         scene = Handleiding.mousePressed()
-

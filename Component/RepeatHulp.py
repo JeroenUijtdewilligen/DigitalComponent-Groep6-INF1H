@@ -1,8 +1,9 @@
 
 def setup():
     
-    global repeat1, repeat2, repeat3, font, output, scene
+    global repeat1, repeat2, repeat3, font, output, scene, font2
     font = createFont("couture.otf", 32)
+    font2 = loadFont("ArialMT-48.vlw")
 
     #variables
     repeat3 = 0
@@ -14,7 +15,7 @@ def setup():
 
 def draw():
     
-    global repeat1, repeat2, repeat3, font, output
+    global repeat1, repeat2, repeat3, font, output, font2
     
     #formule
     output = 1 + repeat1 + (repeat2 * repeat1) + (repeat3 * (repeat2 * repeat1))
@@ -49,7 +50,14 @@ def draw():
 
     #back box
     noFill()
+    if 1210 < mouseX < 1260 and 650 < mouseY < 700:
+        stroke(150)
     rect(1210, 650, 50, 50)
+    textFont(font2)
+    textSize(40)
+    fill(0)
+    text('M', 1236 , 691)
+    stroke(0)
     
 def mousePressed():
     
