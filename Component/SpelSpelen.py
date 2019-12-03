@@ -7,8 +7,11 @@ import temp as t
 from pprint import pprint
 
 def setup():
-    global time, start, font
-
+    global start, event,event_times,time,pause, i, j, bit, font,p1,p2,p3,p4
+    p1 = loadImage("spelspelen/p1.png")
+    p2 = loadImage("spelspelen/p2.png")
+    p3 = loadImage("spelspelen/p3.png")
+    p4 = loadImage("spelspelen/p4.png")
     start = timer.start_time()
     font = createFont("Arial", 32)
     textFont(font)
@@ -24,8 +27,16 @@ def setup():
     scene = "SpelSpelen"
     
 def draw():
-    global start, event,event_times,time,pause, i, j, bit, font
+    global start, event,event_times,time,pause, i, j, bit, font,p1,p2,p3,p4
     background(230)
+    fill(230)
+    stroke(0)
+    square(900, 200, 80)
+    image(p4, 845, 215, 40, 40)
+    image(p3, 920, 150, 40, 40)
+    image(p2, 990, 215, 40, 40)
+    image(p1, 920, 290, 40, 40)
+
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
     if pause == False:
      time = int(f.timer(start))
