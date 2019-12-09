@@ -5,9 +5,17 @@ import random
 import functions as f
 import temp as t
 from pprint import pprint
+import json
+
 
 def setup():
-    global start, event,event_times,time,pause, i, j, bit, font,p1,p2,p3,p4
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj
+    
+    # fetch settings
+    with open('settings.json', 'r') as file:
+        data=file.read()
+    obj = json.loads(data)
+    
     p1 = loadImage("spelspelen/p1.png")
     p2 = loadImage("spelspelen/p2.png")
     p3 = loadImage("spelspelen/p3.png")
@@ -17,14 +25,13 @@ def setup():
     textFont(font)
     frameRate(1)
     strokeWeight(5)
-    global start, event,event_times,time,pause, i, j, bit, scene
     #timer word gestart
     i = 200
     j = 150
     bit = [] 
     pause = False
     #de tijden waar op de event gehouden worden word geladen.
-    event_times = f.events(12, 60) #amount of events u want + #min wachttijd voor event
+    event_times = f.events(obj['amount_of_events'], obj['minimal_timer'], obj['max_timer'], obj['sleep']) #amount of events u want + #min wachttijd voor event
     scene = "SpelSpelen"
     
 def draw():
@@ -76,16 +83,15 @@ def draw():
 def keyPressed():
     global start, event,event_times,time,pause, i, j, bit
     #check if de timer op pauze moet zo ja gaat hij op pauze
-    if key == 'p':
-        pass
-        #time.sleep(60)
+    if scene == 'menu':
+        time.sleep(60)
         
 def check_time():
     if time in event_times:
         fill(0)
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
-        bit.append(f.randn())        
+        bit.append(f.randn(obj))        
     
 def mousePressed():
     global scene

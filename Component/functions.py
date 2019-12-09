@@ -1,5 +1,6 @@
 import time
 import random
+import json
 
 def draw(i, j):
     while j < 700:
@@ -10,24 +11,21 @@ def draw(i, j):
       i += 50    
      j += 50
     
-def randn():
+def randn(obj):
     x = []
     y = []
     x = [250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
     y = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
     b = str(random.choice(x))
     c = str(random.choice(y))
-    colors = ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"]
-    bit = b + "-" + c + "-" + random.choice(colors)
+    bit = b + "-" + c + "-" + random.choice(obj['colors'])
     return bit  
 
-def events(times, min):
-
-    e = [5, 10, 15, 20 ,40, 50, 60, 678]
-    # e=[]
-    # while times >= 0:
-    #     e.append(int(random(min,600)))
-    #     times -= 1
+def events(times, minimal, maximum, wait):
+    e=[5,10]
+    while times >= 0:
+        e.append(int(random.randrange(minimal,maximum, wait)))
+        times -= 1
     return e    
 
 def timer(start):
