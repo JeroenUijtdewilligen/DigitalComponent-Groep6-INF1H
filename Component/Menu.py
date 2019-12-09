@@ -83,4 +83,5 @@ def mousePressed():
         Handleiding.setup()
         return scene
     else:
+        scene = "Menu"
         return scene

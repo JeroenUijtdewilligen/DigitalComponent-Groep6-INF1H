@@ -10,6 +10,7 @@ def setup():
     RepeatHulp.setup()
     Menu.setup()
     Handleiding.setup()
+
 def draw():
     global scene
     if scene == "Menu":
@@ -20,6 +21,7 @@ def draw():
         SpelSpelen.draw()   
     elif scene == "Handleiding":
         Handleiding.draw() 
+        
 def mousePressed():
     global scene
     if scene == "Menu":
