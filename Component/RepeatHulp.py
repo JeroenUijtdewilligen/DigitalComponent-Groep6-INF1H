@@ -1,10 +1,10 @@
 
 def setup():
     
-    global repeat1, repeat2, repeat3, font, output, scene, font2
+    global repeat1, repeat2, repeat3, font, output, scene, font2, img
     font = createFont("couture.otf", 32)
     font2 = loadFont("ArialMT-48.vlw")
-
+    img = loadImage("Achtergrondrepeat.png")
     #variables
     repeat3 = 0
     repeat2 = 0
@@ -15,7 +15,7 @@ def setup():
 
 def draw():
     
-    global repeat1, repeat2, repeat3, font, output, font2
+    global repeat1, repeat2, repeat3, font, output, font2, img
     
     #formule
     output = 1 + repeat1 + (repeat2 * repeat1) + (repeat3 * (repeat2 * repeat1))
@@ -24,6 +24,8 @@ def draw():
     background(240)
     strokeWeight(5)
 
+    image(img, 0, 0)
+
     line(0, 600, 1280, 600)
     line(0, 525, 1280, 525)
 
@@ -31,22 +33,22 @@ def draw():
     fill(0)
     textFont(font)
     text(repeat3, 100, 575)
-    text(repeat2, 300, 575)
-    text(repeat1, 500, 575)
-    text("1", 700, 575)
-    text(output, 900, 575)
+    text(repeat2, 350, 575)
+    text(repeat1, 600, 575)
+    text("1", 850, 575)
+    text(output, 1100, 575)
     
     #green boxes
     fill(0, 255, 0)
     rect(40, 630, 60, 60)
-    rect(240, 630, 60, 60)
-    rect(440, 630, 60, 60)
+    rect(290, 630, 60, 60)
+    rect(540, 630, 60, 60)
    
     #red boxes
     fill(255, 0, 0)
     rect(110, 630, 60, 60)
-    rect(310, 630, 60, 60)
-    rect(510, 630, 60, 60)
+    rect(360, 630, 60, 60)
+    rect(610, 630, 60, 60)
 
     #back box
     noFill()
