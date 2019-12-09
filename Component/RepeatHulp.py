@@ -73,13 +73,13 @@ def mousePressed():
             repeat3 = 0
    
     #greenbox2
-    if 240 < mouseX < 300 and 630 < mouseY < 690:
+    if 290 < mouseX < 350 and 630 < mouseY < 690:
         repeat2 += 1
         if repeat2 > 3:
             repeat2 = 0
     
     #greenbox3
-    if 440 < mouseX < 500 and 630 < mouseY < 690:
+    if 540 < mouseX < 600 and 630 < mouseY < 690:
         repeat1 += 1
         if repeat1 > 3:
             repeat1 = 0
@@ -92,13 +92,13 @@ def mousePressed():
             repeat3 = 3
     
     #redbox2
-    if 310 < mouseX < 370 and 630 < mouseY < 690:
+    if 360 < mouseX < 420 and 630 < mouseY < 690:
         repeat2 -= 1
         if repeat2 < 0:
             repeat2 = 3
    
     #redbox3
-    if 510 < mouseX < 570 and 630 < mouseY < 690:
+    if 610 < mouseX < 670 and 630 < mouseY < 690:
         repeat1 -= 1
         if repeat1 < 0:
             repeat1 = 3    

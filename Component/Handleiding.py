@@ -116,7 +116,7 @@ def draw():
         
         text('Situatie 4', 965, 190)
         text('In Situatie 4 hebben er \n acht Bitflips plaatsgevonden. \n\n In deze situatie zijn er twee groene, \n' 
-             'twee rode en twee witte vakjes gekleurd, \n verder is er nog een geel en wit vakje gekleurd. \n\n' 
+             'twee rode en twee witte vakjes gekleurd, \n verder is er nog een geel en blauw vakje gekleurd. \n\n' 
              'Op de volgende pagina \n staan alle verschillende kleuren met \n de bijbehordende betekenissen beschreven.', 360, 210)
         
         image(bitflipX, 780, 200, 380, 380)
