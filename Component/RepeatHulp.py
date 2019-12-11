@@ -1,3 +1,4 @@
+import Handleiding
 
 def setup():
     
@@ -11,7 +12,7 @@ def setup():
     repeat2 = 0
     repeat1 = 0
     output = 0
-
+    
     scene = "RepeatHulp"
 
 def draw():
@@ -60,6 +61,15 @@ def draw():
     text('M', 1236 , 691)
     stroke(0)
     
+    #Help/ Tutorial box
+    if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+        stroke(150)
+    fill(255)
+    rect(1160, 40, 100, 50)
+    fill(0)
+    text('Help', 1211, 79)
+    stroke(0)
+    
 def mousePressed():
     
     global repeat1, repeat2, repeat3, scene
@@ -101,9 +111,17 @@ def mousePressed():
         repeat1 -= 1
         if repeat1 < 0:
             repeat1 = 3    
-    
+            
+    #Tutorial
+    if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+        scene = "Handleiding" 
+        Handleiding.setup()
+        page = 1
+        return scene
+        
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         scene = "Menu"
         return scene
     else:
+        scene = "RepeatHulp"
         return scene

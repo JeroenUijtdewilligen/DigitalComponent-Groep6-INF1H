@@ -1,3 +1,4 @@
+import SpelSpelen, RepeatHulp
 
 def setup():
     global nextPageArrow, returnArrow, page, font, scene, bitflip0, bitflip1, bitflip2, bitflipX, repeatHulp0, repeatHulp1, repeatHulp2
@@ -38,10 +39,18 @@ def mousePressed():
         page = 7
     if isMouseWithinSpace(20, 650, 50, 50):
         page = 1
+    if isMouseWithinSpace(1160, 40, 100, 72) and page >= 2 and page < 7:
+        scene = "SpelSpelen"
+        SpelSpelen.setup()
+        return scene
+    if isMouseWithinSpace(1150, 40, 117, 72) and page >= 7 and page < 10:
+        scene = "RepeatHulp"
+        return scene
     if isMouseWithinSpace(1210, 650, 50, 50):
         scene = "Menu"
         return scene
     else:
+        scene = "Handleiding"
         return scene
             
 def draw():
@@ -50,10 +59,14 @@ def draw():
     background(240)
     textFont(font, 35)
     textAlign(CENTER)
+    fill(255)
+    tint(255)
+    strokeWeight(5)
+    rect(-10, 620, 1300, 720)
+
+    noTint()
     fill(0)
     text(page, width/ 2, 680)
-    strokeWeight(5)
-    line(0, 620, width, 622)
     noFill()
     
     #Return to Menu
@@ -91,7 +104,6 @@ def draw():
         text('Situatie 1', 965, 190)
         text('Een Bitflip vindt om de \n X aantal (seconden/ minuten) plaats. \n\n In Situatie 1 heeft er \n nog geen Bitflip plaatsgevonden. \n\n'
              'Er hoeven in deze situatie \n geen blokjes geplaatsts te worden.', 360, 210)
-
         image(bitflip0, 780, 200, 380, 380)
         
         
@@ -100,7 +112,6 @@ def draw():
         text('Situatie 2', 965, 190)
         text('In Situatie 2 heeft er wel \n een Bitflip plaatsgevonden. \n\n In deze situatie is er \n een vakje geel gekleurd. \n\n' 
              'Dit gele vakje geeft aan dat \n er een geel blokje, \n op de aangegeven plek, \n op het bord geplaatst moet worden.', 360, 210)
-        
         image(bitflip1, 780, 200, 380, 380)
         
     elif page == 4:
@@ -108,7 +119,6 @@ def draw():
         text('Situatie 3', 965, 190)
         text('In Situatie 3 heeft er \n een Bitflip plaatsgevonden. \n\n In deze situatie is er \n een vakje wit gekleurd. \n\n'
              'Dit witte vakje geeft aan dat er, \n op de aangegeven plek, \n op het bord een blokje moet worden verwijderd. \n', 360, 210)
-
         image(bitflip2, 780, 200, 380, 380)
         
         
@@ -118,7 +128,6 @@ def draw():
         text('In Situatie 4 hebben er \n acht Bitflips plaatsgevonden. \n\n In deze situatie zijn er twee groene, \n' 
              'twee rode en twee witte vakjes gekleurd, \n verder is er nog een geel en blauw vakje gekleurd. \n\n' 
              'Op de volgende pagina \n staan alle verschillende kleuren met \n de bijbehordende betekenissen beschreven.', 360, 210)
-        
         image(bitflipX, 780, 200, 380, 380)
         
     elif page == 6:
@@ -155,7 +164,6 @@ def draw():
         text('Geeft het aantal \n Blokjes aan die \n geplaatst mogen worden.', 1060, 225)
         textSize(40)
         text('Repeat Hulp', width/ 2, 100)
-        
         image(repeatHulp0, 135, 285, 1000, 320)
         
 
@@ -169,7 +177,6 @@ def draw():
         text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 13.', 1060, 225)
         textSize(40)
         text('Voorbeeld 1', width/ 2, 100)
-                
         image(repeatHulp1, 135, 285, 1000, 320)
         
         
@@ -183,7 +190,6 @@ def draw():
         text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 8.', 1060, 225)
         textSize(40)
         text('Voorbeeld 2', width/ 2, 100)
-        
         image(repeatHulp2, 135, 285, 1000, 320)
         image(returnArrow, 550, 640, 60, 60)
         
@@ -197,9 +203,28 @@ def draw():
         textSize(20)
         fill(0)
         text('Pag \n 1 ', 47 , 672)
+        
         if page >=2 and page < 7:
             textSize(55)
             text('Bitflip', width/ 2, 100)
+            textSize(22)
+            if isMouseWithinSpace(1160, 40, 100, 72):
+                stroke(150)
+            fill(255)
+            rect(1160, 40, 100, 72)
+            fill(0)
+            text('  Spel \n Spelen', 1211, 72)
+            stroke(0)
+            
+        if page >= 7 and page < 10:
+            textSize(20)
+            if isMouseWithinSpace(1150, 40, 117, 72):
+                stroke(150)
+            fill(255)
+            rect(1150, 40, 117, 72)
+            fill(0)
+            text('  Naar \n Repeat Hulp', 1207, 72)
+            stroke(0)
         
     if page != 1 and page != 9:
 

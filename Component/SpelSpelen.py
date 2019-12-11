@@ -6,6 +6,7 @@ import functions as f
 import temp as t
 from pprint import pprint
 import json
+import Handleiding
 
 
 def setup():
@@ -59,6 +60,7 @@ def draw():
     noFill()
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         stroke(150)
+    fill(255)
     rect(1210, 650, 50, 50)
     stroke(0)
     fill(0)
@@ -78,7 +80,18 @@ def draw():
           fill(int(g[2]),int(g[3]),int(g[4]))
           stroke(0)
           square(int(g[0]), int(g[1]), 50)
-    check_time()                  
+    check_time()        
+    
+    
+    #Help/ Tutorial box
+    if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+        stroke(150)
+    fill(255)
+    rect(1160, 40, 100, 50)
+    fill(0)
+    textSize(40)
+    text('Help', 1211, 79)
+    stroke(0)
             
 def keyPressed():
     global start, event,event_times,time,pause, i, j, bit
@@ -98,5 +111,15 @@ def mousePressed():
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         scene = "Menu"
         return scene
+    
+    #Tutorial
+    if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+        scene = "Handleiding" 
+        Handleiding.setup()
+        page = 1
+        frameRate(60)
+        return scene
+    
     else:
+        scene = "SpelSpelen"
         return scene
