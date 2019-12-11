@@ -57,13 +57,13 @@ def draw():
     strokeWeight(5)
     line(0, 100, 1280, 100)
     noFill()
-    if 50 < mouseX < 100 and 620 < mouseY < 670:
+    if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         stroke(150)
-    rect(50, 620, 50, 50)
+    rect(1210, 650, 50, 50)
     stroke(0)
     fill(0)
     textSize(40)
-    text('M', 76 , 659)
+    text('M', 1236 , 691)
     noFill()
     textSize(32)
     t.draw()      
@@ -95,7 +95,7 @@ def check_time():
     
 def mousePressed():
     global scene
-    if 50 < mouseX < 100 and 620 < mouseY < 670:
+    if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         scene = "Menu"
         return scene
     else:

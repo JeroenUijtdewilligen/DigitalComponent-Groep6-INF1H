@@ -32,11 +32,11 @@ def draw():
     #text
     fill(0)
     textFont(font)
-    text(repeat3, 100, 575)
-    text(repeat2, 350, 575)
-    text(repeat1, 600, 575)
-    text("1", 850, 575)
-    text(output, 1100, 575)
+    text(repeat3, 108, 575)
+    text(repeat2, 356, 575)
+    text(repeat1, 605, 575)
+    text("1", 875, 575)
+    text(output, 1105, 575)
     
     #green boxes
     fill(0, 255, 0)

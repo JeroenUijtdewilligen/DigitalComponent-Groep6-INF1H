@@ -36,9 +36,9 @@ def mousePressed():
         page = 2
     if isMouseWithinSpace(800, 300, 200, 100) and page == 1:
         page = 7
-    if isMouseWithinSpace(1210, 650, 50, 50):
-        page = 1
     if isMouseWithinSpace(20, 650, 50, 50):
+        page = 1
+    if isMouseWithinSpace(1210, 650, 50, 50):
         scene = "Menu"
         return scene
     else:
@@ -58,10 +58,10 @@ def draw():
     
     #Return to Menu
     textSize(40)
-    text('M', 47 , 690)
-    if isMouseWithinSpace(20, 650, 50, 50):
+    text('M', 1236 , 691)
+    if isMouseWithinSpace(1210, 650, 50, 50):
         stroke(150)
-    rect(20, 650, 50, 50)
+    rect(1210, 650, 50, 50)
     stroke(0)
     
     textSize(30)
@@ -88,11 +88,11 @@ def draw():
         
     elif page == 2:
         
-        text('Situatie 1', 350, 190)
+        text('Situatie 1', 965, 190)
         text('Een Bitflip vindt om de \n X aantal (seconden/ minuten) plaats. \n\n In Situatie 1 heeft er \n nog geen Bitflip plaatsgevonden. \n\n'
-             'Er hoeven in deze situatie \n geen blokjes geplaatsts te worden.', 900, 210)
+             'Er hoeven in deze situatie \n geen blokjes geplaatsts te worden.', 360, 210)
 
-        image(bitflip0, 160, 200, 380, 380)
+        image(bitflip0, 780, 200, 380, 380)
         
         
     elif page ==  3:
@@ -105,11 +105,11 @@ def draw():
         
     elif page == 4:
         
-        text('Situatie 3', 350, 190)
+        text('Situatie 3', 965, 190)
         text('In Situatie 3 heeft er \n een Bitflip plaatsgevonden. \n\n In deze situatie is er \n een vakje wit gekleurd. \n\n'
-             'Dit witte vakje geeft aan dat er, \n op de aangegeven plek, \n op het bord een blokje moet worden verwijderd. \n', 900, 210)
+             'Dit witte vakje geeft aan dat er, \n op de aangegeven plek, \n op het bord een blokje moet worden verwijderd. \n', 360, 210)
 
-        image(bitflip2, 160, 200, 380, 380)
+        image(bitflip2, 780, 200, 380, 380)
         
         
     elif page == 5:
@@ -124,12 +124,13 @@ def draw():
     elif page == 6:
         
         textSize(23)
-        text('Er moet een zwart blokje geplaatst worden. \n Dit heeft hetzelfde effect als de Dead Transistor kaart.', 410, 220)
-        text('Er moet een blokje worden verwijderd.', 340, 363)
-        text('Er moet een rood blokje geplaatst worden.', 360, 493)
-        text('Er moet een geel blokje geplaatst worden.', 968, 232)
-        text('Er moet een groen blokje geplaatst worden.', 978, 363)
-        text('Er moet een blauw blokje geplaatst worden.', 978, 493)
+        text('Er moet een zwart blokje geplaatst worden.', 360, 218) 
+        text('Dit heeft hetzelfde effect als de Dead Transistor kaart.', 411, 248)
+        text('Er moet een blokje worden verwijderd.', 337, 363)
+        text('Er moet een rood blokje geplaatst worden.', 359, 493)
+        text('Er moet een geel blokje geplaatst worden.', 970, 232)
+        text('Er moet een groen blokje geplaatst worden.', 979, 363)
+        text('Er moet een blauw blokje geplaatst worden.', 979, 493)
         fill(0)               #Black
         rect(80, 200, 50, 50)
         fill(255)             #White
@@ -189,13 +190,13 @@ def draw():
         
     if page != 1:
         #Return to page 1
-        if isMouseWithinSpace(1210, 650, 50, 50):
+        if isMouseWithinSpace(20, 650, 50, 50):
             stroke(150)
         noFill()
-        rect(1210, 650, 50, 50)
-        textSize(40)
+        rect(20, 650, 50, 50)
+        textSize(20)
         fill(0)
-        text('1', 1236 , 690)
+        text('Pag \n 1 ', 47 , 672)
         if page >=2 and page < 7:
             textSize(55)
             text('Bitflip', width/ 2, 100)
