@@ -2,10 +2,11 @@
 def setup():
     
     global repeat1, repeat2, repeat3, font, output, scene, font2, img
+    #general setup
     font = createFont("couture.otf", 32)
     font2 = loadFont("ArialMT-48.vlw")
     img = loadImage("Achtergrondrepeat.png")
-    #variables
+    #variables for the formula
     repeat3 = 0
     repeat2 = 0
     repeat1 = 0
@@ -23,9 +24,7 @@ def draw():
     #nice graphic stuff
     background(240)
     strokeWeight(5)
-
     image(img, 0, 0)
-
     line(0, 600, 1280, 600)
     line(0, 525, 1280, 525)
 

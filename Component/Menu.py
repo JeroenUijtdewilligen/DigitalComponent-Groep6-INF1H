@@ -1,15 +1,18 @@
 import SpelSpelen, RepeatHulp, Handleiding
 def setup():
     global achtergrond, x, y, font, imgboek, scene, imgkaarten, imgrepeat, imglogo
+    #loading in images and font
     achtergrond = loadImage("menu/Achtergrond.png")
     imgboek = loadImage("menu/Book.png")
     imgkaarten = loadImage("menu/kaarten.png")
     imgrepeat = loadImage("menu/repeat.png")
     imglogo = loadImage("menu/logo.png")
     font = createFont("couture.otf", 144)
-
+    
+    #these are the variables for the location of the moving background
     x = 0
     y = -1280
+    #determines the scene
     scene = "Menu"
     
 def draw():
@@ -37,6 +40,7 @@ def draw():
     stroke(0)
     text("BitFlip!", 40, 175)
     
+    #buttons
     fill(255)
     strokeWeight(5)
     stroke(0)
@@ -61,6 +65,7 @@ def draw():
         image(imgboek, 750, 250, 400, 400)
     rect(110, 550, 250, 100)
     
+    #text inside buttons
     fill(0)
     textFont(font, 22)
     textAlign(CENTER)
@@ -70,6 +75,7 @@ def draw():
     
 def mousePressed():
     global scene
+    #scene selection
     if 110 < mouseX < 360 and 250 < mouseY < 350:
         scene = "SpelSpelen"
         SpelSpelen.setup()
