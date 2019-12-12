@@ -1,19 +1,17 @@
 import time
 import random
 import json
-
-def draw(i, j):
-    while j < 700:
-     while i < 1000:
-      fill(255)
-      stroke(0)
-      square(i, j, 50)
-      i += 50    
-     j += 50
-    
+        
+def draw(i, j, s):
+    for row in range(i, 700 + s, s):
+     for column in range(j, 600 + s, s):
+         strokeWeight(3)
+         fill(220,220,220)
+         stroke(0)
+         square(row, column, s)
+         
 def randn(obj):
-    x = []
-    y = []
+    
     x = [250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
     y = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
     b = str(random.choice(x))
@@ -22,6 +20,7 @@ def randn(obj):
     return bit  
 
 def events(times, minimal, maximum, wait):
+    #test tijden voor bitflips 
     e=[5,10]
     while times >= 0:
         e.append(int(random.randrange(minimal,maximum, wait)))

@@ -1,6 +1,6 @@
 
 
-import Menu, RepeatHulp, SpelSpelen, functions, temp,time, Handleiding
+import Menu, RepeatHulp, SpelSpelen, functions,time, Handleiding
 
 def setup():
     #setting up some values

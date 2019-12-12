@@ -3,14 +3,13 @@ import time
 import timer 
 import random
 import functions as f
-import temp as t
 from pprint import pprint
 import json
 import Handleiding
 
 
 def setup():
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
     
     # fetch settings
     with open('settings.json', 'r') as file:
@@ -27,8 +26,9 @@ def setup():
     frameRate(1)
     strokeWeight(5)
     #timer word gestart
-    i = 200
+    i = 250
     j = 150
+    square_size = 50 
     bit = [] 
     pause = False
     #de tijden waar op de event gehouden worden word geladen.
@@ -36,7 +36,7 @@ def setup():
     scene = "SpelSpelen"
     
 def draw():
-    global start, event,event_times,time,pause, i, j, bit, font,p1,p2,p3,p4
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
     background(230)
     fill(230)
     strokeWeight(5)
@@ -68,8 +68,7 @@ def draw():
     text('M', 1236 , 691)
     noFill()
     textSize(32)
-    t.draw()      
-    #f.draw(i, j)
+    f.draw(i, j, square_size)
 
     textFont(font)
     textAlign(CENTER)
