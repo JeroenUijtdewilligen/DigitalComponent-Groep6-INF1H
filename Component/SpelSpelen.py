@@ -42,9 +42,9 @@ def draw():
     strokeWeight(5)
     stroke(0)
     square(900, 200, 80)
-    image(p4, 845, 215, 40, 40)
+    image(p2, 845, 215, 40, 40)
     image(p3, 920, 150, 40, 40)
-    image(p2, 990, 215, 40, 40)
+    image(p4, 990, 215, 40, 40)
     image(p1, 920, 290, 40, 40)
 
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
