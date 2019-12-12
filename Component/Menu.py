@@ -1,12 +1,13 @@
-import SpelSpelen, RepeatHulp, Handleiding
+import SpelSpelen, RepeatHulp, Handleiding, Settings
 def setup():
-    global achtergrond, x, y, font, imgboek, scene, imgkaarten, imgrepeat, imglogo
+    global achtergrond, x, y, font, imgboek, scene, imgkaarten, imgrepeat, imglogo, imgSettings
     #loading in images and font
     achtergrond = loadImage("menu/Achtergrond.png")
     imgboek = loadImage("menu/Book.png")
     imgkaarten = loadImage("menu/kaarten.png")
     imgrepeat = loadImage("menu/repeat.png")
     imglogo = loadImage("menu/logo.png")
+    imgSettings = loadImage('menu/Settings.png')
     font = createFont("couture.otf", 144)
     
     #these are the variables for the location of the moving background
@@ -65,6 +66,8 @@ def draw():
         image(imgboek, 750, 250, 400, 400)
     rect(110, 550, 250, 100)
     
+    image(imgSettings, 1080, 50, 150, 150)
+    
     #text inside buttons
     fill(0)
     textFont(font, 22)
@@ -87,6 +90,10 @@ def mousePressed():
     elif 110 < mouseX < 360 and 550 < mouseY < 650:
         scene = "Handleiding"
         Handleiding.setup()
+        return scene
+    elif 1080 < mouseX < 1230 and 50 < mouseY < 200:
+        scene = "Settings"
+        Settings.setup()
         return scene
     else:
         scene = "Menu"
