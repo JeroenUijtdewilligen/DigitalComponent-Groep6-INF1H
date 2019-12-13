@@ -22,7 +22,7 @@ def setup():
     p4 = loadImage("spelspelen/p4.png")
     start = timer.start_time()
     font = createFont("Arial", 32)
-    textFont(font)
+    
     frameRate(1)
     strokeWeight(5)
     #timer word gestart
@@ -37,6 +37,7 @@ def setup():
     
 def draw():
     global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
+    textFont(font)
     background(230)
     fill(230)
     strokeWeight(5)
