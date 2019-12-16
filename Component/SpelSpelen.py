@@ -7,14 +7,21 @@ from pprint import pprint
 import json
 import Handleiding
 
+add_library('minim')
+from ddf.minim import Minim
+
 
 def setup():
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, player, minim
     
     # fetch settings
     with open('settings.json', 'r') as file:
         data=file.read()
     obj = json.loads(data)
+    
+
+    minim = Minim(this)
+    player = minim.loadFile("WatGoed.mp3")
     
     p1 = loadImage("spelspelen/p1.png")
     p2 = loadImage("spelspelen/p2.png")
@@ -100,8 +107,11 @@ def keyPressed():
         time.sleep(60)
         
 def check_time():
+    global player
     if time in event_times:
         fill(0)
+        player.rewind()
+        player.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
         bit.append(f.randn(obj))        
