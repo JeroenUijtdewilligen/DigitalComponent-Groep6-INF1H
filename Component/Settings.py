@@ -34,8 +34,8 @@ def draw():
     if tab == "Controls":
         fill(255); rect(-10, -12, 650, 70, 17)
         fill(230); rect(640, -12, 650, 70, 17)
-        fill(0); text('Algemeen \n Terug naar het menu = M', 650, 200)
-        text('Tutorial \n Terug naar de eerste pagina = 1 \n  Volgende pagina = Rechter Pijl \n Vorige pagina = Linker Pijl', 650, 400)
+        fill(0); text('Algemeen \n\n Terug naar het menu = M', 650, 200)
+        text('Tutorial \n\n Terug naar de eerste pagina = 1 \n  Volgende pagina = Rechter Pijl \n Vorige pagina = Linker Pijl', 650, 400)
     if tab == "Extras":
         fill(230); rect(-10, -12, 650, 70, 17)
         fill(255); rect(640, -12, 650, 70, 17)

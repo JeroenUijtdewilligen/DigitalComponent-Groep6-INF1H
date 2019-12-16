@@ -38,6 +38,12 @@ def keyPressed():
             return scene
         else:
             return scene
+    if key == 'd' and page < 9:
+        page += 1
+        return scene
+    if key == 'a' and page > 1:
+        page -= 1
+        return scene
     if key == '1':
         page = 1
         return scene
