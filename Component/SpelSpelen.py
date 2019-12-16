@@ -9,13 +9,13 @@ import Handleiding
 
 
 def setup():
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, thema
     
     # fetch settings
     with open('settings.json', 'r') as file:
         data=file.read()
     obj = json.loads(data)
-    
+    thema = loadImage("data/ThemaCM.png")
     p1 = loadImage("spelspelen/p1.png")
     p2 = loadImage("spelspelen/p2.png")
     p3 = loadImage("spelspelen/p3.png")
@@ -36,17 +36,19 @@ def setup():
     scene = "SpelSpelen"
     
 def draw():
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, thema
     textFont(font)
     background(230)
     fill(230)
     strokeWeight(5)
     stroke(0)
-    square(900, 200, 80)
-    image(p2, 845, 215, 40, 40)
-    image(p3, 920, 150, 40, 40)
-    image(p4, 990, 215, 40, 40)
-    image(p1, 920, 290, 40, 40)
+    
+    image(thema, 0, 100)
+    
+    image(p2, 200, 380, 40, 40)
+    image(p3, 480, 110, 40, 40)
+    image(p4, 760, 380, 40, 40)
+    image(p1, 480, 650, 40, 40)
 
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
     if pause == False:
