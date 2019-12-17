@@ -1,4 +1,5 @@
 import SpelSpelen, RepeatHulp, Handleiding, Settings
+
 def setup():
     global achtergrond, x, y, font, imgboek, scene, imgkaarten, imgrepeat, imglogo, imgSettings
     #loading in images and font
@@ -21,6 +22,7 @@ def draw():
     global achtergrond, x, y, font, scene
     
     #sliding Background
+
     image(achtergrond, x, 0)
     x -= 1
     if x == -1280:

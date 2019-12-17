@@ -13,7 +13,7 @@ from ddf.minim import Minim
 
 def setup():
 
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, player, minim, thema
+    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, Watgoed, HelpHelp , minim, thema
 
     
     # fetch settings
@@ -23,7 +23,8 @@ def setup():
   
     thema = loadImage("data/ThemaCM.png")
     minim = Minim(this)
-    player = minim.loadFile("WatGoed.mp3")
+    Watgoed = minim.loadFile("WatGoed.mp3")
+    HelpHelp = minim.loadFile("HelpHelp.mp3")
     
 
     p1 = loadImage("spelspelen/p1.png")
@@ -102,6 +103,7 @@ def draw():
     
     #Help/ Tutorial box
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+
         stroke(150)
     fill(255)
     rect(1160, 40, 100, 50)
@@ -117,23 +119,25 @@ def keyPressed():
         time.sleep(60)
         
 def check_time():
-    global player
+    global HelpHelp
     if time in event_times:
         fill(0)
-        player.rewind()
-        player.play()
+        Watgoed.rewind()
+        Watgoed.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
         bit.append(f.randn(obj))        
     
 def mousePressed():
-    global scene
+    global scene, Watgoed
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         scene = "Menu"
         return scene
     
     #Tutorial
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
+        HelpHelp.rewind()
+        HelpHelp.play()
         scene = "Handleiding" 
         Handleiding.setup()
         page = 1
