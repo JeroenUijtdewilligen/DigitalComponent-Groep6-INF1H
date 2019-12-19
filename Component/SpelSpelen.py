@@ -21,7 +21,7 @@ def setup():
         data=file.read()
     obj = json.loads(data)
   
-    thema = loadImage("data/ThemaCM.png")
+    thema = loadImage("data/ThemaSTANDAARD.png")
     minim = Minim(this)
     Watgoed = minim.loadFile("WatGoed.mp3")
     HelpHelp = minim.loadFile("HelpHelp.mp3")
