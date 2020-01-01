@@ -1,79 +1,49 @@
 #alle libarys worden ingeladen
-import time
-import timer 
-import random
+import Main_setup as gl
 import functions as f
-from pprint import pprint
-import json
+import time
 import Handleiding
 
-add_library('minim')
-from ddf.minim import Minim
-
+# add_library('minim')
+# from ddf.minim import Minim
 
 def setup():
 
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, Watgoed, HelpHelp , minim, thema
-
-    
-    # fetch settings
-    with open('settings.json', 'r') as file:
-        data=file.read()
-    obj = json.loads(data)
-  
-    thema = loadImage("data/ThemaSTANDAARD.png")
-    minim = Minim(this)
-    Watgoed = minim.loadFile("WatGoed.mp3")
-    HelpHelp = minim.loadFile("HelpHelp.mp3")
-    
-
-    p1 = loadImage("spelspelen/p1.png")
-    p2 = loadImage("spelspelen/p2.png")
-    p3 = loadImage("spelspelen/p3.png")
-    p4 = loadImage("spelspelen/p4.png")
-    start = timer.start_time()
+    global i, j,font,square_size,start
     font = createFont("Arial", 32)
-    
-    frameRate(1)
+    textFont(font)
     strokeWeight(5)
     #timer word gestart
+    start = time.time()
     i = 250
     j = 150
-    square_size = 50 
-    bit = [] 
-    pause = False
-    #de tijden waar op de event gehouden worden word geladen.
-    event_times = f.events(obj['amount_of_events'], obj['minimal_timer'], obj['max_timer'], obj['sleep']) #amount of events u want + #min wachttijd voor event
-    scene = "SpelSpelen"
+    square_size = 50
     
 def draw():
-    global start, event,event_times,time,pause, i, j, bit,font,p1,p2,p3,p4,scene,obj,square_size, thema
-    textFont(font)
+    frameRate(1)
+    global i, j,font,square_size,start, thema,c_time
+    textFont(gl.font)
     background(230)
     fill(230)
     strokeWeight(5)
     stroke(0)
     
-    image(thema, 0, 100)
+    image(gl.thema, 0, 100)
     
     square(210, 380, 40)
     square(480, 110, 40)
     square(750, 380, 40)
     square(480, 650, 40)
     
-    image(p2, 210, 380, 40, 40)
-    image(p3, 480, 110, 40, 40)
-    image(p4, 750, 380, 40, 40)
-    image(p1, 480, 650, 40, 40)
+    image(gl.p2, 210, 380, 40, 40)
+    image(gl.p3, 480, 110, 40, 40)
+    image(gl.p4, 750, 380, 40, 40)
+    image(gl.p1, 480, 650, 40, 40)
 
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
-    if pause == False:
-     time = int(f.timer(start))
-    else:
-     time = 0
-     
+    c_time = int(f.timer(start))
     fill(0)
-    text(str(f.time_convert(time)), 500, 70)
+    text(str(f.time_convert(c_time)), 500, 70)
     strokeWeight(5)
     line(0, 100, 1280, 100)
     noFill()
@@ -91,9 +61,10 @@ def draw():
 
     textFont(font)
     textAlign(CENTER)
-    #er word gekeken of er tijd is voor een event            
-    if bit:
-        for coords in bit:
+    #er word gekeken of er tijd is voor een event 
+               
+    if gl.bit:
+        for coords in gl.bit:
           g = coords.split("-")
           fill(int(g[2]),int(g[3]),int(g[4]))
           stroke(0)
@@ -113,20 +84,20 @@ def draw():
     stroke(0)
             
 def keyPressed():
-    global start, event,event_times,time,pause, i, j, bit
+    global start, event,event_times,c_time,pause, i, j, bit
     #check if de timer op pauze moet zo ja gaat hij op pauze
     if scene == 'menu':
         time.sleep(60)
         
 def check_time():
-    global HelpHelp
-    if time in event_times:
+    global HelpHelp, c_time
+    if c_time in gl.event_times:
         fill(0)
-        Watgoed.rewind()
-        Watgoed.play()
+        gl.Watgoed.rewind()
+        gl.Watgoed.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
-        bit.append(f.randn(obj))        
+        gl.bit.append(f.randn(gl.obj))        
     
 def mousePressed():
     global scene, Watgoed
@@ -136,10 +107,10 @@ def mousePressed():
     
     #Tutorial
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
-        HelpHelp.rewind()
-        HelpHelp.play()
+        gl.HelpHelp.rewind()
+        gl.HelpHelp.play()
         scene = "Handleiding" 
-        Handleiding.setup()
+        Handleiding.draw()
         page = 1
         frameRate(60)
         return scene

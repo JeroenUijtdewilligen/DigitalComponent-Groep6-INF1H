@@ -1,9 +1,8 @@
+import Main_setup as gl
 def setup():
-    global font, tab, scene
-    font = loadFont("ArialMT-48.vlw")
+    global tab
     
     tab = "Controls"
-    scene = "Settings"
     
 def isMouseWithinSpace(x, y, w, h):
     if x < mouseX < x + w and y < mouseY < y + h:
@@ -12,7 +11,7 @@ def isMouseWithinSpace(x, y, w, h):
         return False    
     
 def mousePressed():
-    global tab, scene
+    global tab
     if isMouseWithinSpace(0, 0, 650, 70) and tab == "Extras":
         tab = "Controls"
     
@@ -29,7 +28,7 @@ def mousePressed():
 def draw():
     global tab
     background(230)
-    textFont(font, 35)
+    textFont(gl.font, 35)
     
     if tab == "Controls":
         fill(255); rect(-10, -12, 650, 70, 17)

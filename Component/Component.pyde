@@ -1,54 +1,37 @@
+import Menu, RepeatHulp, SpelSpelen, functions,time, Handleiding
+import Main_setup as gl
 
-
-import Menu, RepeatHulp, SpelSpelen, functions,time, Handleiding, Settings
 
 def setup():
+    gl.setup()
     #setting up some values
-    global scene,start
     size(1280, 720)
-    
     #setting up the scenes
-    scene = "Menu"
     RepeatHulp.setup()
     Menu.setup()
     Handleiding.setup()
-    Settings.setup()
+    SpelSpelen.setup()
+    
 
 def draw():
-    global scene
     #determines which scene should be active
-    if scene == "Menu":
+    if gl.scene == "Menu":
         Menu.draw()
-    elif scene == "RepeatHulp":
+    elif gl.scene == "RepeatHulp":
         RepeatHulp.draw()
-    elif scene == "SpelSpelen":
+    elif gl.scene == "SpelSpelen":
         SpelSpelen.draw()   
-    elif scene == "Handleiding":
+    elif gl.scene == "Handleiding":
         Handleiding.draw() 
-    elif scene == "Settings":
-        Settings.draw()
         
 def mousePressed():
-    global scene
+
     #determines which mousepressed should be active
-    if scene == "Menu":
-        scene = Menu.mousePressed()
-    elif scene == "RepeatHulp":
-        scene = RepeatHulp.mousePressed()
-    elif scene == "SpelSpelen":
-        scene = SpelSpelen.mousePressed()
-    elif scene == "Handleiding":
-        scene = Handleiding.mousePressed()
-    elif scene == "Settings":
-        scene = Settings.mousePressed()
-        
-def keyPressed():
-    global scene
-    if scene == "Handleiding":
-        scene = Handleiding.keyPressed()
-    if scene != "Menu":
-        if key == 'm':
-            scene = "Menu"
-        
-    
-    
+    if gl.scene == "Menu":
+        gl.scene = Menu.mousePressed()
+    elif gl.scene == "RepeatHulp":
+        gl.scene = RepeatHulp.mousePressed()
+    elif gl.scene == "SpelSpelen":
+        gl.scene = SpelSpelen.mousePressed()
+    elif gl.scene == "Handleiding":
+        gl.scene = Handleiding.mousePressed()

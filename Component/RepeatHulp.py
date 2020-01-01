@@ -1,31 +1,26 @@
 import Handleiding
+import Main_setup as gl
 
 def setup():
     
-    global repeat1, repeat2, repeat3, font, output, scene, font2, img
+    global repeat1, repeat2, repeat3, font, output, font2
     #general setup
     font = createFont("couture.otf", 32)
     font2 = loadFont("ArialMT-48.vlw")
-    img = loadImage("Achtergrondrepeat.png")
     #variables for the formula
     repeat3 = 0
     repeat2 = 0
     repeat1 = 0
     output = 0
     
-    scene = "RepeatHulp"
-
 def draw():
-    
-    global repeat1, repeat2, repeat3, font, output, font2, img
-    
     #formule
     output = 1 + repeat1 + (repeat2 * repeat1) + (repeat3 * (repeat2 * repeat1))
     
     #nice graphic stuff
     background(240)
     strokeWeight(5)
-    image(img, 0, 0)
+    image(gl.img, 0, 0)
     line(0, 600, 1280, 600)
     line(0, 525, 1280, 525)
 
@@ -72,7 +67,7 @@ def draw():
     
 def mousePressed():
     
-    global repeat1, repeat2, repeat3, scene
+    global repeat1, repeat2, repeat3
     
     #interactivity for green boxes
     #greenbox1
@@ -115,7 +110,7 @@ def mousePressed():
     #Tutorial
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
         scene = "Handleiding" 
-        Handleiding.setup()
+        Handleiding.draw()
         page = 1
         return scene
         
