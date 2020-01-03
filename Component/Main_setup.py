@@ -14,6 +14,7 @@ def setup():
     global thema, minim, Watgoed, HelpHelp
 #handleiding global varaibles
     
+    tab = "Controls"
     nextPageArrow = loadImage("nextPageArrow.png")
     returnArrow = loadImage("returnArrow.png")
     logo = loadImage("Logo.jpg")
@@ -57,7 +58,7 @@ def setup():
     elapsed = 0
     time_snapshot = 0
     start = 0
-    thema = loadImage("data/ThemaFVD.png")
+    thema = loadImage("data/ThemaSTANDAARD.png")
     minim = Minim(this)
     Watgoed = minim.loadFile("WatGoed.mp3")
     HelpHelp = minim.loadFile("HelpHelp.mp3")

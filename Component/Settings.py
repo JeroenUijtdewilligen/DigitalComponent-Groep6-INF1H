@@ -19,10 +19,10 @@ def mousePressed():
         tab = "Extras"
 
     if isMouseWithinSpace(1210, 650, 50, 50):
-        scene = "Menu"
-        return scene
+        gl.scene = "Menu"
+        return gl.scene
     else:
-        return scene
+        return gl.scene
 
         
 def draw():
@@ -47,7 +47,7 @@ def draw():
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         stroke(150)
     rect(1210, 650, 50, 50)
-    textFont(font); textSize(40)
+    textFont(gl.font); textSize(40)
     fill(0)
     text('M', 1236 , 691)
     stroke(0)

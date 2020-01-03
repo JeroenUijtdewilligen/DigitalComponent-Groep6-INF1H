@@ -1,4 +1,4 @@
-import Menu, RepeatHulp, SpelSpelen, functions,time, Handleiding
+import Menu, RepeatHulp, SpelSpelen, functions,time, Handleiding, Settings
 import Main_setup as gl
 
 
@@ -11,7 +11,7 @@ def setup():
     Menu.setup()
     Handleiding.setup()
     SpelSpelen.setup()
-    
+    Settings.setup()
 
 def draw():
     #determines which scene should be active
@@ -23,6 +23,8 @@ def draw():
         SpelSpelen.draw()   
     elif gl.scene == "Handleiding":
         Handleiding.draw() 
+    elif gl.scene == "Settings":
+        Settings.draw()
         
 def mousePressed():
 
@@ -35,3 +37,5 @@ def mousePressed():
         gl.scene = SpelSpelen.mousePressed()
     elif gl.scene == "Handleiding":
         gl.scene = Handleiding.mousePressed()
+    elif gl.scene == "Settings":
+        gl.scene = Settings.mousePressed()
