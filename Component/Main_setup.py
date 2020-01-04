@@ -60,7 +60,7 @@ def setup():
     start = 0
     thema = loadImage("data/ThemaSTANDAARD.png")
     minim = Minim(this)
-    Watgoed = minim.loadFile("WatGoed.mp3")
-    HelpHelp = minim.loadFile("HelpHelp.mp3")
+    Watgoed = minim.loadFile("SoundEffects/WatGoed.mp3")
+    HelpHelp = minim.loadFile("SoundEffects/HelpHelp.mp3")
 #main global variables        
     scene = "Menu"
