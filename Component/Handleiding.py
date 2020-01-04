@@ -12,7 +12,7 @@ def isMouseWithinSpace(x, y, w, h):
         return False
     
 def keyPressed():
-    global page, scene
+    global page
     if key == CODED:
         if keyCode == LEFT and page > 1:
             page -= 1
@@ -35,7 +35,7 @@ def keyPressed():
         return scene
 
 def mousePressed():
-    global page, scene
+    global page
     if isMouseWithinSpace(670, 640, 60, 60) and page < 9:
         page += 1
     if isMouseWithinSpace(550, 640, 60, 60) and page > 1:
