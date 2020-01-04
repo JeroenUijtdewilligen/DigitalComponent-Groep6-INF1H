@@ -39,3 +39,10 @@ def mousePressed():
         gl.scene = Handleiding.mousePressed()
     elif gl.scene == "Settings":
         gl.scene = Settings.mousePressed()
+        
+def keyPressed():
+    if gl.scene != "Menu" and key == 'm':
+        gl.scene = "Menu"
+    if gl.scene == "Handleiding":
+        gl.scene = Handleiding.keyPressed()
+        

@@ -16,23 +16,23 @@ def keyPressed():
     if key == CODED:
         if keyCode == LEFT and page > 1:
             page -= 1
-            return scene
+            return gl.scene
         if keyCode == RIGHT and page < 9:
             page += 1
-            return scene
+            return gl.scene
         else:
-            return scene
+            return gl.scene
     if key == 'd' and page < 9:
         page += 1
-        return scene
+        return gl.scene
     if key == 'a' and page > 1:
         page -= 1
-        return scene
+        return gl.scene
     if key == '1':
         page = 1
-        return scene
+        return gl.scene
     else:
-        return scene
+        return gl.scene
 
 def mousePressed():
     global page
