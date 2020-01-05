@@ -48,13 +48,16 @@ def mousePressed():
         page = 1
     if isMouseWithinSpace(1160, 40, 100, 72) and page >= 2 and page < 7:
         scene = "SpelSpelen"
+        page = 1
         SpelSpelen.setup()
         return scene
     if isMouseWithinSpace(1150, 40, 117, 72) and page >= 7 and page < 10:
         scene = "RepeatHulp"
+        page = 1
         return scene
     if isMouseWithinSpace(1210, 650, 50, 50):
         scene = "Menu"
+        page = 1
         return scene
     else:
         scene = "Handleiding"
