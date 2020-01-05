@@ -48,7 +48,11 @@ def mousePressed():
         page = 1
     if isMouseWithinSpace(1160, 40, 100, 72) and page >= 2 and page < 7:
         scene = "SpelSpelen"
-        SpelSpelen.setup()
+        if gl.start == 0:
+            gl.start = gl.time.time()
+        else:
+            gl.rest += (gl.time.time() - gl.time_snapshot)       
+        SpelSpelen.draw()
         return scene
     if isMouseWithinSpace(1150, 40, 117, 72) and page >= 7 and page < 10:
         scene = "RepeatHulp"

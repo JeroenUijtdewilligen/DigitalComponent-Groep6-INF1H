@@ -39,6 +39,6 @@ def time_convert(sec):
   hours = mins // 60
   mins = mins % 60
               
-  return "Tijd verstreken: " + str(hours) + "." + str(mins) + "." + str(sec)
+  return "Tijd verstreken: " + str(hours) + ":" + str(mins) + ":" + str(sec)
 
     

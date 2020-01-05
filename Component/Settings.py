@@ -24,7 +24,6 @@ def mousePressed():
     else:
         return gl.scene
 
-        
 def draw():
     global tab
     background(230)

@@ -11,7 +11,7 @@ def setup():
     global time, random, json, pprint
     global scene,nextPageArrow,returnArrow,page,font,scene,bitflip0,bitflip1,bitflip2,bitflipX
     global repeatHulp0,repeatHulp1,repeatHulp2,menu_font,achtergrond,imgboek,imgkaarten,imgrepeat,imglogo,menu_font,img,obj,p1,p2,p3,p4,bit,event_times,elapsed,time_snapshot,start,imgSettings
-    global thema, minim, Watgoed, HelpHelp
+    global thema, minim, bitflip_sound, help_sound,start,rest
 #handleiding global varaibles
     
     tab = "Controls"
@@ -54,13 +54,15 @@ def setup():
     p3 = loadImage("spelspelen/p3.png")
     p4 = loadImage("spelspelen/p4.png")
     event_times = f.events(obj['amount_of_events'], obj['minimal_timer'], obj['max_timer'], obj['sleep']) #amount of events u want + #min wachttijd voor event
-    bit = []                
+    bit = []
+    start = 0                
     elapsed = 0
+    rest = 0
     time_snapshot = 0
     start = 0
-    thema = loadImage("data/ThemaSTANDAARD.png")
+    thema = loadImage("data/Thema" + obj["current_theme"] + ".png")
     minim = Minim(this)
-    Watgoed = minim.loadFile("SoundEffects/WatGoed.mp3")
-    HelpHelp = minim.loadFile("SoundEffects/HelpHelp.mp3")
+    bitflip_sound = minim.loadFile("SoundEffects/" + obj["bitflip_sound"] + ".mp3")
+    help_sound = minim.loadFile("SoundEffects/" + obj["help_sound"] + ".mp3")
 #main global variables        
     scene = "Menu"

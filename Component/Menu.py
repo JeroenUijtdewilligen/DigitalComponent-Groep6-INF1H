@@ -74,6 +74,10 @@ def mousePressed():
     #scene selection
     if 110 < mouseX < 360 and 250 < mouseY < 350:
         scene = "SpelSpelen"
+        if gl.start == 0:
+            gl.start = gl.time.time()
+        else:
+            gl.rest += (gl.time.time() - gl.time_snapshot)    
         SpelSpelen.draw()
         return scene
     elif 110 < mouseX < 360 and 400 < mouseY < 500:

@@ -4,17 +4,12 @@ import functions as f
 import time
 import Handleiding
 
-# add_library('minim')
-# from ddf.minim import Minim
-
 def setup():
 
     global i, j,font,square_size,start
     font = createFont("Arial", 32)
     textFont(font)
     strokeWeight(5)
-    #timer word gestart
-    start = time.time()
     i = 250
     j = 150
     square_size = 50
@@ -22,6 +17,7 @@ def setup():
 def draw():
     frameRate(1)
     global i, j,font,square_size,start, thema,c_time
+    
     textFont(gl.font)
     background(230)
     fill(230)
@@ -41,9 +37,9 @@ def draw():
     image(gl.p1, 480, 650, 40, 40)
 
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
-    c_time = int(f.timer(start))
+    c_time = int(f.timer(gl.start))
     fill(0)
-    text(str(f.time_convert(c_time)), 500, 70)
+    text(str(f.time_convert(c_time - int(gl.rest))), 500, 70)
     strokeWeight(5)
     line(0, 100, 1280, 100)
     noFill()
@@ -82,36 +78,32 @@ def draw():
     textSize(40)
     text('Help', 1211, 79)
     stroke(0)
-            
-def keyPressed():
-    global start, event,event_times,c_time,pause, i, j, bit
-    #check if de timer op pauze moet zo ja gaat hij op pauze
-    if scene == 'menu':
-        time.sleep(60)
         
 def check_time():
-    global HelpHelp, c_time
+    global c_time
     if c_time in gl.event_times:
         fill(0)
-        gl.Watgoed.rewind()
-        gl.Watgoed.play()
+        gl.bitflip_sound.rewind()
+        gl.bitflip_sound.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
         gl.bit.append(f.randn(gl.obj))        
     
 def mousePressed():
-    global scene, Watgoed
+    global scene
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
+        gl.time_snapshot = time.time()
         scene = "Menu"
         return scene
     
     #Tutorial
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
-        gl.HelpHelp.rewind()
-        gl.HelpHelp.play()
-        scene = "Handleiding" 
+        gl.help_sound.rewind()
+        gl.help_sound.play()
+        scene = "Handleiding"
+        gl.time_snapshot = time.time()
         Handleiding.draw()
-        page = 1
+        page = 0
         frameRate(60)
         return scene
     
