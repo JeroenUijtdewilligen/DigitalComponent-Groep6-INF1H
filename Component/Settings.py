@@ -20,9 +20,29 @@ def mousePressed():
 
     if isMouseWithinSpace(1210, 650, 50, 50):
         gl.scene = "Menu"
+        tab = "Controls"
         return gl.scene
     else:
         return gl.scene
+    
+def keyPressed():
+    global tab
+    if key == CODED:
+        if keyCode == LEFT and tab == "Extras":
+            tab = "Controls"
+            return gl.scene
+        if keyCode == RIGHT and tab == "Controls":
+            tab = "Extras"
+            return gl.scene
+        else:
+            return gl.scene
+    if key == 'm':
+        gl.scene = "Menu"
+        tab = "Controls"
+        return gl.scene
+    else:
+        return gl.scene
+
 
 def draw():
     global tab

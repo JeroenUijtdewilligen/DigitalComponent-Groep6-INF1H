@@ -35,15 +35,15 @@ def draw():
     
     #green boxes
     fill(0, 255, 0)
-    rect(40, 630, 60, 60)
-    rect(290, 630, 60, 60)
-    rect(540, 630, 60, 60)
-   
-    #red boxes
-    fill(255, 0, 0)
     rect(110, 630, 60, 60)
     rect(360, 630, 60, 60)
     rect(610, 630, 60, 60)
+   
+    #red boxes
+    fill(255, 0, 0)
+    rect(40, 630, 60, 60)
+    rect(290, 630, 60, 60)
+    rect(540, 630, 60, 60)
 
     #back box
     noFill()
@@ -66,46 +66,45 @@ def draw():
     stroke(0)
     
 def mousePressed():
-    
     global repeat1, repeat2, repeat3
     
     #interactivity for green boxes
     #greenbox1
     if 40 < mouseX < 100 and 630 < mouseY < 690:
-        repeat3 += 1
-        if repeat3 > 3:
-            repeat3 = 0
+        repeat3 -= 1
+        if repeat3 < 0:
+            repeat3 = 3
    
     #greenbox2
     if 290 < mouseX < 350 and 630 < mouseY < 690:
-        repeat2 += 1
-        if repeat2 > 3:
-            repeat2 = 0
+        repeat2 -= 1
+        if repeat2 < 0:
+            repeat2 = 3
     
     #greenbox3
     if 540 < mouseX < 600 and 630 < mouseY < 690:
-        repeat1 += 1
-        if repeat1 > 3:
-            repeat1 = 0
+        repeat1 -= 1
+        if repeat1 < 0:
+            repeat1 = 3
     
     #interactivity for red boxes
     #redbox1
     if 110 < mouseX < 170 and 630 < mouseY < 690:
-        repeat3 -= 1
-        if repeat3 < 0:
-            repeat3 = 3
+        repeat3 += 1
+        if repeat3 > 3:
+            repeat3 = 0
     
     #redbox2
     if 360 < mouseX < 420 and 630 < mouseY < 690:
-        repeat2 -= 1
-        if repeat2 < 0:
-            repeat2 = 3
+        repeat2 += 1
+        if repeat2 > 3:
+            repeat2 = 0
    
     #redbox3
     if 610 < mouseX < 670 and 630 < mouseY < 690:
-        repeat1 -= 1
-        if repeat1 < 0:
-            repeat1 = 3    
+        repeat1 += 1
+        if repeat1 > 3:
+            repeat1 = 0
             
     #Tutorial
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
