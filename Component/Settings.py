@@ -39,12 +39,12 @@ def draw():
         fill(255); rect(640, -12, 650, 70, 17)
         #SpelSpelenSettings
         
-        fill(0); text("Spelintstellingen", 640, 100)
+        fill(0); text("Spelinstellingen", 640, 100)
         
         #Divider
         line(0, 400, 1280, 400)
         #ThemaSettings
-        fill(0); text("Themaintstellingen", 640, 450)
+        fill(0); text("Themainstellingen", 640, 450)
         
     fill(0)
 

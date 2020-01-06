@@ -60,7 +60,7 @@ def setup():
     rest = 0
     time_snapshot = 0
     start = 0
-    thema = loadImage("data/Thema" + obj["current_theme"] + ".png")
+    thema = loadImage("data/ThemaR6S.png")
     minim = Minim(this)
     bitflip_sound = minim.loadFile("SoundEffects/" + obj["bitflip_sound"] + ".mp3")
     help_sound = minim.loadFile("SoundEffects/" + obj["help_sound"] + ".mp3")
