@@ -20,9 +20,29 @@ def mousePressed():
 
     if isMouseWithinSpace(1210, 650, 50, 50):
         gl.scene = "Menu"
+        tab = "Controls"
         return gl.scene
     else:
         return gl.scene
+    
+def keyPressed():
+    global tab
+    if key == CODED:
+        if keyCode == LEFT and tab == "Extras":
+            tab = "Controls"
+            return gl.scene
+        if keyCode == RIGHT and tab == "Controls":
+            tab = "Extras"
+            return gl.scene
+        else:
+            return gl.scene
+    if key == 'm':
+        gl.scene = "Menu"
+        tab = "Controls"
+        return gl.scene
+    else:
+        return gl.scene
+
 
 def draw():
     global tab
@@ -32,22 +52,43 @@ def draw():
     if tab == "Controls":
         fill(255); rect(-10, -12, 650, 70, 17)
         fill(230); rect(640, -12, 650, 70, 17)
-        fill(0); text('Algemeen \n\n Terug naar het menu = M', 650, 200)
-        text('Tutorial \n\n Terug naar de eerste pagina = 1 \n  Volgende pagina = Rechter Pijl \n Vorige pagina = Linker Pijl', 650, 400)
+
+        stroke(195)
+        line(120, 235, 1160, 235); line(120, 415, 1160, 415)
+        line(120, 480, 1160, 480); line(120, 545, 1160, 545)
+        stroke(0)
+             
+        fill(0)
+        
+        textFont(gl.boldFont, 35); text('Algemeen', 200, 140); text('Tutorial', 180, 320)
+        textFont(gl.font, 35)
+        
+        textSize(25); text('Terug naar het menu', 233, 220)
+        text('Volgende pagina', 215, 400)
+        text('Vorige pagina', 199, 465)
+        text('Terug naar pagina 1', 233, 530)
+        
+        text('Rechter Pijl of S', 1050, 400)
+        text('Linker Pijl of A', 1058, 465)
+        textSize(35); text('M', 1120, 220); text('1', 1128, 530)
+        
+        
+        
+        
     if tab == "Extras":
         fill(230); rect(-10, -12, 650, 70, 17)
         fill(255); rect(640, -12, 650, 70, 17)
         #SpelSpelenSettings
         
-        fill(0); text("Spelintstellingen", 640, 100)
+        fill(0); text("Spelinstellingen", 640, 100)
         
         #Divider
         line(0, 400, 1280, 400)
         #ThemaSettings
-        fill(0); text("Themaintstellingen", 640, 450)
+        fill(0); text("Themainstellingen", 640, 450)
         
     fill(0)
-
+    textFont(gl.font, 35)
     text('Controls', 320, 40)
     text('Extras', 960, 40)
     

@@ -10,7 +10,7 @@ from ddf.minim import Minim
 def setup():
     global time, random, json, pprint
     global scene,nextPageArrow,returnArrow,page,font,scene,bitflip0,bitflip1,bitflip2,bitflipX
-    global repeatHulp0,repeatHulp1,repeatHulp2,menu_font,achtergrond,imgboek,imgkaarten,imgrepeat,imglogo,menu_font,img,obj,p1,p2,p3,p4,bit,event_times,elapsed,time_snapshot,start,imgSettings
+    global repeatHulp0,repeatHulp1,repeatHulp2,menu_font,achtergrond,imgboek,imgkaarten,imgrepeat,imglogo,menu_font,img,obj,p1,p2,p3,p4,bit,event_times,elapsed,time_snapshot,start,imgSettings,boldFont
     global thema, minim, bitflip_sound, help_sound,start,rest
 #handleiding global varaibles
     
@@ -28,6 +28,7 @@ def setup():
     repeatHulp1 = loadImage("handleiding/repeatHulp1.png")
     repeatHulp2 = loadImage("handleiding/repeatHulp2.png")
     font = loadFont("ArialMT-48.vlw")
+    boldFont = loadFont("Arial-BoldMT-48.vlw")
 
 #Menu global varaibles
 
@@ -60,9 +61,10 @@ def setup():
     rest = 0
     time_snapshot = 0
     start = 0
-    thema = loadImage("data/Thema" + obj["current_theme"] + ".png")
+    thema = loadImage("data/ThemaR6S.png")
     minim = Minim(this)
     bitflip_sound = minim.loadFile("SoundEffects/" + obj["bitflip_sound"] + ".mp3")
     help_sound = minim.loadFile("SoundEffects/" + obj["help_sound"] + ".mp3")
 #main global variables        
     scene = "Menu"
+    

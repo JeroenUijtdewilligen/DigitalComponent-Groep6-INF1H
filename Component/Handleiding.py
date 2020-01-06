@@ -28,6 +28,10 @@ def keyPressed():
     if key == 'a' and page > 1:
         page -= 1
         return gl.scene
+    if key == 'm':
+        gl.scene = "Menu"
+        page = 1
+        return gl.scene
     if key == '1':
         page = 1
         return gl.scene
@@ -107,8 +111,8 @@ def draw():
         
         textSize(55)
         text('Bitflip', 380, 370)
-        text('Tutorial Digitale Component', width/ 2, 120) 
-        textSize(40)
+        textFont(gl.boldFont, 50); text('Tutorial Digitale Component', width/ 2, 120) 
+        textFont(gl.font, 40)
         text('Repeat \n Hulp', 900, 340)
         
         image(gl.nextPageArrow, 670, 640, 60, 60)
@@ -171,44 +175,44 @@ def draw():
     elif page == 7:
         
         textSize(20)
-        text('Geeft de  waarde \n van de Repeat kaart \n aan op de 1e plek.', 220, 225)
-        text('Geeft de waarde \n van de Repeat kaart \n aan op de 2e plek.', 430, 225)
-        text('Geeft de waarde \n van de Repeat kaart \n aan op de 3e plek.', 640, 225)
-        text('Geeft de waarde \n van de Draw kaart aan \n die gespeeld is.', 845, 225)
-        text('Geeft het aantal \n Blokjes aan die \n geplaatst mogen worden.', 1060, 225)
-        textSize(40)
+        text('Geeft de  waarde \n van de Repeat kaart \n aan op de 1e plek.', 125, 350)
+        text('Geeft de waarde \n van de Repeat kaart \n aan op de 2e plek.', 385, 350)
+        text('Geeft de waarde \n van de Repeat kaart \n aan op de 3e plek.', 650, 350)
+        text('Geeft de waarde \n van de Draw kaart aan \n die gespeeld is.', 905, 350)
+        text('Geeft het aantal \n Blokjes aan die \n geplaatst mogen worden.', 1145, 350)
+        textFont(gl.boldFont, 50)
         text('Repeat Hulp', width/ 2, 100)
-        image(gl.repeatHulp0, 135, 285, 1000, 320)
+        image(gl.repeatHulp0, 0, 417, 1280, 200)
         
 
     elif page == 8:
         
         textSize(20)
-        text('Op de 1e plek \n is er een Repeat Kaart \n met de waarde 2.' , 220, 225)
-        text('Op de 2e plek \n is er een Repeat Kaart \n met de waarde 1.' , 430, 225)
-        text('Op de 3e plek \n is er een Repeat Kaart \n met de waarde 3.' , 640, 225)
-        text('De waarde van \n de Draw kaart is \n altijd gelijk aan 1.', 845, 225)
-        text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 13.', 1060, 225)
-        textSize(40)
+        text('Op de 1e plek \n is er een Repeat Kaart \n met de waarde 2.' , 125, 350)
+        text('Op de 2e plek \n is er een Repeat Kaart \n met de waarde 1.' , 385, 350)
+        text('Op de 3e plek \n is er een Repeat Kaart \n met de waarde 3.' , 650, 350)
+        text('De waarde van de \n Draw kaart is \n altijd gelijk aan 1.', 905, 350)
+        text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 13.', 1145, 350)
+        textFont(gl.boldFont, 50)
         text('Voorbeeld 1', width/ 2, 100)
-        image(gl.repeatHulp1, 135, 285, 1000, 320)
+        image(gl.repeatHulp1, 0, 417, 1280, 200)
         
         
     elif page == 9:
         
         textSize(20)
-        text('Op de 1e plek \n is er een Repeat Kaart \n met de waarde 1.' , 220, 225)
-        text('Op de 2e plek \n is er een Repeat Kaart \n met de waarde 3.' , 430, 225)
-        text('Op de 3e plek \n is er een Repeat Kaart \n met de waarde 1.' , 640, 225)
-        text('De waarde van \n de Draw kaart is \n altijd gelijk aan 1.', 845, 225)
-        text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 8.', 1060, 225)
-        textSize(40)
+        text('Op de 1e plek \n is er een Repeat Kaart \n met de waarde 1.' , 125, 350)
+        text('Op de 2e plek \n is er een Repeat Kaart \n met de waarde 3.' , 385, 350)
+        text('Op de 3e plek \n is er een Repeat Kaart \n met de waarde 1.' , 650, 350)
+        text('De waarde van de \n Draw kaart is \n altijd gelijk aan 1.', 905, 350)
+        text('Het aantal blokjes \n dat geplaatst mag worden \n is dus gelijk aan 8.', 1145, 350)
+        textFont(gl.boldFont, 50)
         text('Voorbeeld 2', width/ 2, 100)
-        image(gl.repeatHulp2, 135, 285, 1000, 320)
+        image(gl.repeatHulp2, 0, 417, 1280, 200)
         image(gl.returnArrow, 550, 640, 60, 60)
         
-        
     if page != 1:
+        textFont(gl.font, 40)
         #Return to page 1
         if isMouseWithinSpace(20, 650, 50, 50):
             stroke(150)
@@ -219,9 +223,9 @@ def draw():
         text('Pag \n 1 ', 47 , 672)
         
         if page >=2 and page < 7:
-            textSize(55)
+            textFont(gl.boldFont, 55)
             text('Bitflip', width/ 2, 100)
-            textSize(22)
+            textFont(gl.font, 22)
             if isMouseWithinSpace(1160, 40, 100, 72):
                 stroke(150)
             fill(255)
