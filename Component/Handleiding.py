@@ -28,6 +28,10 @@ def keyPressed():
     if key == 'a' and page > 1:
         page -= 1
         return gl.scene
+    if key == 'm':
+        gl.scene = "Menu"
+        page = 1
+        return gl.scene
     if key == '1':
         page = 1
         return gl.scene
