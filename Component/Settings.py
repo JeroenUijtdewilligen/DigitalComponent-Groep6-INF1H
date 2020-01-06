@@ -74,7 +74,7 @@ def draw():
         text('Linker Pijl of A', 1058, 515)
         
         textSize(35); text('M', 1120, 220); text('1', 1128, 580)
-        textSize(30); text('ESC', 1120, 285) 
+        textSize(30); text('ESC', 1108, 285) 
         
         
         

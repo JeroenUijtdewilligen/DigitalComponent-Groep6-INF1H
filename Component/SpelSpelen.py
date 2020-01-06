@@ -71,10 +71,10 @@ def draw():
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
         stroke(150)
     fill(255)
-    rect(1160, 40, 100, 50)
+    rect(1160, 25, 100, 50)
     fill(0)
     textSize(40)
-    text('Help', 1211, 79)
+    text('Help', 1211, 64)
     stroke(0)
         
 def check_time():
