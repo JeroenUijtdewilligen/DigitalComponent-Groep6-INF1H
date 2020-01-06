@@ -4,19 +4,66 @@
       "max_timer": 1200,
       "colors": ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"],
       "sleep": 120,
+      "active_theme": "mc",
       "siege" : [
             "R6S",
             "Rainbow Bomb",
             "Rainbow Hostage"
       ],
-      "meiland": [
+      "cm": [
             "CM",
             "CM-Wijnen",
             "WatGoed"
       ],
-      "current_theme": "R6S",
-      "bitflip_sound": "Rainbow Bomb",
-      "help_sound": "HelpHelp"
-
+      "mario": [
+            "MARIO",
+            "Mario Bitflip",
+            "Mario Help"
+      ],
+      "bonzi": [
+            "BONZI",
+            "Bonzi",
+            "Bonzi"
+      ],
+      "fvd": [
+            "FVD",
+            "TB-Oikofobie",
+            "TB-Woeker"
+      ],
+      "mc": [
+            "MC",
+            "Minecraft Click",
+            "Minecraft Sheep"
+      ],
+      "thanos": [
+            "THANOS",
+            "Thanos Head",
+            "Thanos Choices"
+      ],
+      "standaard": [
+            "STANDAARD",
+            "opgepas",
+            "Standard Help"
+      ],
+      "kerst": [
+            "KERST",
+            "Christmas Bells",
+            "Christmas hohoho"
+      ],
+      "kanye": [
+            "KANYE",
+            "XXXTENTACION - SAD!",
+            "XXXTENTACION Spotlight Uh"
+      ],
+      "bc": [
+            "BC",
+            "BC Laugh",
+            "BC"
+      ],
+      "youngdaggerdack": [
+            "YOUNGDAGGERDACK",
+            "Ye-GAGA",
+            "Ye-Good Morning"
+      ]
 }
 

@@ -61,10 +61,10 @@ def setup():
     rest = 0
     time_snapshot = 0
     start = 0
-    thema = loadImage("data/ThemaR6S.png")
+    thema = loadImage("data/Thema" + obj[obj['active_theme']][0] + ".png")
     minim = Minim(this)
-    bitflip_sound = minim.loadFile("SoundEffects/" + obj["bitflip_sound"] + ".mp3")
-    help_sound = minim.loadFile("SoundEffects/" + obj["help_sound"] + ".mp3")
+    bitflip_sound = minim.loadFile("SoundEffects/" + obj[obj['active_theme']][1] + ".mp3")
+    help_sound = minim.loadFile("SoundEffects/" + obj[obj['active_theme']][2] + ".mp3")
 #main global variables        
     scene = "Menu"
     
