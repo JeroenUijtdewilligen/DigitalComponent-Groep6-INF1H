@@ -37,9 +37,9 @@ def draw():
     image(gl.p1, 480, 650, 40, 40)
 
     #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
-    c_time = int(f.timer(gl.start))
+    c_time = int(f.timer(gl.start)) - int(gl.rest)
     fill(0)
-    text(str(f.time_convert(c_time - int(gl.rest))), 500, 70)
+    text(str(f.time_convert(c_time)), 500, 70)
     strokeWeight(5)
     line(0, 100, 1280, 100)
     noFill()
@@ -57,8 +57,7 @@ def draw():
 
     textFont(font)
     textAlign(CENTER)
-    #er word gekeken of er tijd is voor een event 
-               
+    #er word gekeken of er tijd is voor een event         
     if gl.bit:
         for coords in gl.bit:
           g = coords.split("-")
@@ -67,10 +66,9 @@ def draw():
           square(int(g[0]), int(g[1]), 50)
     check_time()        
     
-    
+    gl.obj["siege"][0]
     #Help/ Tutorial box
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
-
         stroke(150)
     fill(255)
     rect(1160, 40, 100, 50)
@@ -87,7 +85,8 @@ def check_time():
         gl.bitflip_sound.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
-        gl.bit.append(f.randn(gl.obj))        
+        gl.bit.append(f.create_event(gl.obj, gl.bit))  
+    
     
 def mousePressed():
     global scene
@@ -100,8 +99,8 @@ def mousePressed():
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
         gl.help_sound.rewind()
         gl.help_sound.play()
-        scene = "Handleiding"
         gl.time_snapshot = time.time()
+        scene = "Handleiding"
         Handleiding.draw()
         page = 0
         frameRate(60)

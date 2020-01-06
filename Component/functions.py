@@ -10,18 +10,14 @@ def draw(i, j, s):
          stroke(0)
          square(row, column, s)
          
-def randn(obj):
-    
-    x = [250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
-    y = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
-    b = str(random.choice(x))
-    c = str(random.choice(y))
-    bit = b + "-" + c + "-" + random.choice(obj['colors'])
-    return bit  
-
 def events(times, minimal, maximum, wait):
     #test tijden voor bitflips 
-    e=[5,10]
+    e=[5,10,20,40,60]
+    #testing code to add more event triggers
+    # count = 0
+    # while count < 120:
+    #     e.append(count) 
+    #     count += 2
     while times >= 0:
         e.append(int(random.randrange(minimal,maximum, wait)))
         times -= 1
@@ -38,7 +34,30 @@ def time_convert(sec):
   sec = sec % 60
   hours = mins // 60
   mins = mins % 60
-              
+  
+  if mins < 10:
+     mins = "0" + str(mins)
+  if hours < 10:
+     hours = "0" + str(hours) 
+  if sec < 10:
+     sec = "0" + str(sec)                                                                 
+                                      
   return "Tijd verstreken: " + str(hours) + ":" + str(mins) + ":" + str(sec)
+
+def create_event(obj, events):
+    
+    x = [250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
+    y = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
+    b = str(random.choice(x))
+    c = str(random.choice(y))
+    bit = b + "-" + c + "-" 
+    if events:     
+        for o in events:
+            g = o.split("-")
+            f = g[0] + "-" + g[1] + "-"
+            if f == bit:
+                create_event(obj, events)
+    return bit + random.choice(obj['colors'])    
+      
 
     

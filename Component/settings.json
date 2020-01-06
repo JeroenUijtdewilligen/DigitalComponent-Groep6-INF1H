@@ -4,7 +4,17 @@
       "max_timer": 1200,
       "colors": ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"],
       "sleep": 120,
-      "current_theme": "MC",
+      "siege" : [
+            "R6S",
+            "Rainbow Bomb",
+            "Rainbow Hostage"
+      ],
+      "meiland": [
+            "CM",
+            "CM-Wijnen",
+            "WatGoed"
+      ],
+      "current_theme": "R6S",
       "bitflip_sound": "Rainbow Bomb",
       "help_sound": "HelpHelp"
 
