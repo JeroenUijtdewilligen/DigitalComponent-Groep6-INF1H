@@ -54,23 +54,27 @@ def draw():
         fill(230); rect(640, -12, 650, 70, 17)
 
         stroke(195)
-        line(120, 235, 1160, 235); line(120, 415, 1160, 415)
-        line(120, 480, 1160, 480); line(120, 545, 1160, 545)
+        line(120, 235, 1160, 235); line(120, 300, 1160, 300)
+        line(120, 465, 1160, 465); line(120, 530, 1160, 530)
+        line(120, 595, 1160, 595)
         stroke(0)
              
         fill(0)
         
-        textFont(gl.boldFont, 35); text('Algemeen', 200, 140); text('Tutorial', 180, 320)
+        textFont(gl.boldFont, 35); text('Algemeen', 200, 140); text('Tutorial', 180, 370)
         textFont(gl.font, 35)
         
         textSize(25); text('Terug naar het menu', 233, 220)
-        text('Volgende pagina', 215, 400)
-        text('Vorige pagina', 199, 465)
-        text('Terug naar pagina 1', 233, 530)
+        text('Programma afsluiten', 233, 285)
+        text('Volgende pagina', 215, 450)
+        text('Vorige pagina', 199, 515)
+        text('Terug naar pagina 1', 233, 580)
         
-        text('Rechter Pijl of S', 1050, 400)
-        text('Linker Pijl of A', 1058, 465)
-        textSize(35); text('M', 1120, 220); text('1', 1128, 530)
+        text('Rechter Pijl of S', 1050, 450)
+        text('Linker Pijl of A', 1058, 515)
+        
+        textSize(35); text('M', 1120, 220); text('1', 1128, 580)
+        textSize(30); text('ESC', 1120, 285) 
         
         
         

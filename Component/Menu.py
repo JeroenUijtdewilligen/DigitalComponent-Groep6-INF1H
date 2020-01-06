@@ -59,6 +59,14 @@ def draw():
         image(gl.imgboek, 750, 250, 400, 400)
     rect(110, 550, 250, 100)
     
+    
+    fill(255)
+    strokeWeight(5)
+    stroke(0)
+    if 1060 < mouseX < 1210 and 590 < mouseY < 640:
+        stroke(150)
+    rect(1060, 590, 150, 60)
+    
     image(gl.imgSettings, 1080, 50, 150, 150)
     
     #text inside buttons
@@ -68,6 +76,7 @@ def draw():
     text("Spel Starten", 235, 310)
     text("Repeat Hulp", 235, 460)
     text("Tutorial", 235, 610)
+    text("Exit", 1135, 630)
     
 def mousePressed():
     global scene
@@ -92,6 +101,8 @@ def mousePressed():
         scene = "Settings"
         Settings.draw()
         return scene
+    elif 1060 < mouseX < 1210 and 590 < mouseY < 640:
+        exit()
     else:
         scene = "Menu"
         return scene
