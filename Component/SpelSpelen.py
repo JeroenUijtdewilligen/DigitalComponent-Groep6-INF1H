@@ -5,7 +5,7 @@ import time
 import Handleiding
 
 def setup():
-
+    print(gl.thema)
     global i, j,font,square_size,start
     font = createFont("Arial", 32)
     textFont(font)

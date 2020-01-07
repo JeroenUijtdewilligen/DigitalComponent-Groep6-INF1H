@@ -12,7 +12,7 @@ def setup():
     Handleiding.setup()
     SpelSpelen.setup()
     Settings.setup()
-
+    
 def draw():
     #determines which scene should be active
     if gl.scene == "Menu":
