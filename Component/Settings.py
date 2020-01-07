@@ -108,7 +108,7 @@ def mousePressed():
         #zelda
         pass
     if isMouseWithinSpace(960, 585, 250, 50):
-        #diana
+        #shiba
         pass
     else:
         return gl.scene
@@ -256,7 +256,7 @@ def draw():
         if isMouseWithinSpace(960, 585, 250, 50):
             stroke(150)
         fill(255); rect(960, 585, 250, 50)
-        fill(0); text("Diana", 1085, 623)
+        fill(0); text("Shiba", 1085, 623)
         stroke(0)
         
     fill(0)
