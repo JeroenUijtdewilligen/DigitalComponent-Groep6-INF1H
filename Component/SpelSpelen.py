@@ -26,10 +26,12 @@ def draw():
     
     image(gl.thema, 0, 100)
     
+    fill(255)
     square(210, 380, 40)
     square(480, 110, 40)
     square(750, 380, 40)
     square(480, 650, 40)
+    fill(0)
     
     image(gl.p2, 210, 380, 40, 40)
     image(gl.p3, 480, 110, 40, 40)

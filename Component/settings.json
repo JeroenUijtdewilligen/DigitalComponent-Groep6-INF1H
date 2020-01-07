@@ -4,7 +4,7 @@
       "max_timer": 1200,
       "colors": ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"],
       "sleep": 120,
-      "active_theme": "mario",
+      "active_theme": "kerst",
       "siege" : [
             "R6S",
             "Rainbow Bomb",
@@ -17,7 +17,7 @@
       ],
       "mario": [
             "MARIO",
-            "Mario Bitflip",
+            "Mario Time",
             "Mario Help"
       ],
       "bonzi": [
@@ -42,7 +42,7 @@
       ],
       "standaard": [
             "STANDAARD",
-            "opgepas",
+            "Standard Bitflip",
             "Standard Help"
       ],
       "kerst": [
@@ -52,18 +52,18 @@
       ],
       "kanye": [
             "KANYE",
-            "Ye-GAGA",
-            "Ye-Good Morning"
+            "Ye-Good Morning",
+            "Ye-GAGA"
       ],
       "bc": [
             "BC",
-            "BC Laugh",
-            "BC"
+            "BC",
+            "BC Laugh"
       ],
       "youngdaggerdack": [
             "YOUNGDAGGERDACK",
-            "XXXTENTACION - SAD!",
-            "XXXTENTACION Spotlight Uh"
+            "XXXTENTACION Spotlight Uh",
+            "XXXTENTACION - SAD!"
       ],
       "honden": [
             "",
