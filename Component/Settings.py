@@ -22,6 +22,39 @@ def mousePressed():
         gl.scene = "Menu"
         tab = "Controls"
         return gl.scene
+    
+    if isMouseWithinSpace(700, 130, 250, 50):
+        #standaard
+    if isMouseWithinSpace(960, 130, 250, 50):
+        #random
+    if isMouseWithinSpace(700, 195, 250, 50):
+        #big chungus
+    if isMouseWithinSpace(960, 195, 250, 50):
+        #bonzibuddy
+    if isMouseWithinSpace(700, 260, 250, 50):
+        #meiland
+    if isMouseWithinSpace(960, 260, 250, 50):
+        #fvd
+    if isMouseWithinSpace(700, 325, 250, 50):
+        #kanye
+    if isMouseWithinSpace(960, 325, 250, 50):
+        #kerst
+    if isMouseWithinSpace(700, 390, 250, 50):
+        #super mario
+    if isMouseWithinSpace(960, 390, 250, 50):
+        #minecraft
+    if isMouseWithinSpace(700, 455, 250, 50):
+        #rainbow 6 siege
+    if isMouseWithinSpace(960, 455, 250, 50):
+        #thanos
+    if isMouseWithinSpace(700, 520, 250, 50):
+        #wilco
+    if isMouseWithinSpace(960, 520, 250, 50):
+        #xxxtentacion
+    if isMouseWithinSpace(700, 585, 250, 50):
+        #zelda
+    if isMouseWithinSpace(960, 585, 250, 50):
+        #diana
     else:
         return gl.scene
     
@@ -89,39 +122,87 @@ def draw():
         #ThemaSettings
         fill(0); text("Themainstellingen", 960, 100)
         
+        stroke(0)
+        if isMouseWithinSpace(700, 130, 250, 50):
+            stroke(150)
         fill(255); rect(700, 130, 250, 50)
         fill(0); text("Standaard", 825, 168)
+        stroke(0)
+        if isMouseWithinSpace(960, 130, 250, 50):
+            stroke(150)
         fill(255); rect(960, 130, 250, 50)
         fill(0); text("Random", 1085, 168)
+        stroke(0)
+        if isMouseWithinSpace(700, 195, 250, 50):
+            stroke(150)
         fill(255); rect(700, 195, 250, 50)
         fill(0); text("Big Chungus", 825, 233)
+        stroke(0)
+        if isMouseWithinSpace(960, 195, 250, 50):
+            stroke(150)
         fill(255); rect(960, 195, 250, 50)
         fill(0); text("Bonzi Buddy", 1085, 233)
+        stroke(0)
+        if isMouseWithinSpace(700, 260, 250, 50):
+            stroke(150)
         fill(255); rect(700, 260, 250, 50)
         fill(0); text("Meiland", 825, 298)
+        stroke(0)
+        if isMouseWithinSpace(960, 260, 250, 50):
+            stroke(150)
         fill(255); rect(960, 260, 250, 50)
         fill(0); text("FVD", 1085, 298)
+        stroke(0)
+        if isMouseWithinSpace(700, 325, 250, 50):
+            stroke(150)
         fill(255); rect(700, 325, 250, 50)
         fill(0); text("Kanye", 825, 363)
+        stroke(0)
+        if isMouseWithinSpace(960, 325, 250, 50):
+            stroke(150)
         fill(255); rect(960, 325, 250, 50)
         fill(0); text("Kerst", 1085, 363)
+        stroke(0)
+        if isMouseWithinSpace(700, 390, 250, 50):
+            stroke(150)
         fill(255); rect(700, 390, 250, 50)
         fill(0); text("Super Mario", 825, 428)
+        stroke(0)
+        if isMouseWithinSpace(960, 390, 250, 50):
+            stroke(150)
         fill(255); rect(960, 390, 250, 50)
         fill(0); text("Minecraft", 1085, 428)
+        stroke(0)
+        if isMouseWithinSpace(700, 455, 250, 50):
+            stroke(150)
         fill(255); rect(700, 455, 250, 50)
         fill(0); text("Rainbow 6 S", 825, 493)
+        stroke(0)
+        if isMouseWithinSpace(960, 455, 250, 50):
+            stroke(150)
         fill(255); rect(960, 455, 250, 50)
         fill(0); text("Thanos", 1085, 493)
+        stroke(0)
+        if isMouseWithinSpace(700, 520, 250, 50):
+            stroke(150)
         fill(255); rect(700, 520, 250, 50)
         fill(0); text("Wilco", 825, 558)
+        stroke(0)
+        if isMouseWithinSpace(960, 520, 250, 50):
+            stroke(150)
         fill(255); rect(960, 520, 250, 50)
         fill(0); text("Young Dagger", 1085, 558)
+        stroke(0)
+        if isMouseWithinSpace(700, 585, 250, 50):
+            stroke(150)
         fill(255); rect(700, 585, 250, 50)
         fill(0); text("Zelda", 825, 623)
+        stroke(0)
+        if isMouseWithinSpace(960, 585, 250, 50):
+            stroke(150)
         fill(255); rect(960, 585, 250, 50)
         fill(0); text("Diana", 1085, 623)
-    
+        stroke(0)
         
     fill(0)
     textFont(gl.font, 35)
