@@ -84,12 +84,30 @@ def draw():
         fill(255); rect(640, -12, 650, 70, 17)
         #SpelSpelenSettings
         
-        fill(0); text("Spelinstellingen", 640, 100)
+        fill(0); text("Spelinstellingen", 320, 100)
         
         #Divider
-        line(0, 400, 1280, 400)
+        line(640, 0, 640, 720)
         #ThemaSettings
-        fill(0); text("Themainstellingen", 640, 450)
+        fill(0); text("Themainstellingen", 960, 100)
+        
+        fill(255); rect(700, 130, 250, 50)
+        fill(255); rect(960, 130, 250, 50)
+        fill(255); rect(700, 195, 250, 50)
+        fill(255); rect(960, 195, 250, 50)
+        fill(255); rect(700, 260, 250, 50)
+        fill(255); rect(960, 260, 250, 50)
+        fill(255); rect(700, 325, 250, 50)
+        fill(255); rect(960, 325, 250, 50)
+        fill(255); rect(700, 390, 250, 50)
+        fill(255); rect(960, 390, 250, 50)
+        fill(255); rect(700, 455, 250, 50)
+        fill(255); rect(960, 455, 250, 50)
+        fill(255); rect(700, 520, 250, 50)
+        fill(255); rect(960, 520, 250, 50)
+        fill(255); rect(700, 585, 250, 50)
+        fill(255); rect(960, 585, 250, 50)
+    
         
     fill(0)
     textFont(gl.font, 35)
