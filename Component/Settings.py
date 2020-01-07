@@ -77,8 +77,6 @@ def draw():
         textSize(30); text('ESC', 1108, 285) 
         
         
-        
-        
     if tab == "Extras":
         fill(230); rect(-10, -12, 650, 70, 17)
         fill(255); rect(640, -12, 650, 70, 17)

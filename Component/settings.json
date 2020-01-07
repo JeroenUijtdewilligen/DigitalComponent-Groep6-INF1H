@@ -4,7 +4,7 @@
       "max_timer": 1200,
       "colors": ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"],
       "sleep": 120,
-      "active_theme": "mc",
+      "active_theme": "mario",
       "siege" : [
             "R6S",
             "Rainbow Bomb",
@@ -64,6 +64,16 @@
             "YOUNGDAGGERDACK",
             "XXXTENTACION - SAD!",
             "XXXTENTACION Spotlight Uh"
+      ],
+      "honden": [
+            "",
+            "",
+            ""
+      ],
+      "wilco": [
+            "",
+            "",
+            ""
       ]
 }
 
