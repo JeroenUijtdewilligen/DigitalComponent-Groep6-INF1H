@@ -131,6 +131,7 @@ def draw():
     noFill()
     if 1210 < mouseX < 1260 and 650 < mouseY < 700:
         stroke(150)
+    fill(255)
     rect(1210, 650, 50, 50)
     textFont(gl.font); textSize(40)
     fill(0)
