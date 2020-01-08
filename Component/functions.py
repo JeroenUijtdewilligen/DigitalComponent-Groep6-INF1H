@@ -13,11 +13,6 @@ def draw(i, j, s):
 def events(times, minimal, maximum, wait):
     #test tijden voor bitflips 
     e=[5,10,20,40,60]
-    #testing code to add more event triggers
-    # count = 0
-    # while count < 120:
-    #     e.append(count) 
-    #     count += 2
     while times >= 0:
         e.append(int(random.randrange(minimal,maximum, wait)))
         times -= 1
