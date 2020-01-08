@@ -68,7 +68,6 @@ def draw():
           square(int(g[0]), int(g[1]), 50)
     check_time()        
     
-    gl.obj["siege"][0]
     #Help/ Tutorial box
     if 1160 < mouseX < 1260 and 40 < mouseY < 90:
         stroke(150)
