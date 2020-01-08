@@ -156,8 +156,8 @@ def change_theme(theme):
         theme = gl.random.choice(k)
     
     gl.thema = loadImage("data/Thema" + gl.themas[theme][0] + ".png")
-    gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][0] + ".mp3")
-    gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][0] + ".mp3")
+    gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][1] + ".mp3")
+    gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][2] + ".mp3")
     write_json(theme)    
     
     
