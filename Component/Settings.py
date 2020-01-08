@@ -14,6 +14,7 @@ def draw():
     global tab
     background(230)
     textFont(gl.font, 35)
+        
     
     if tab == "Controls":
         fill(255); rect(-10, -12, 650, 70, 17)
@@ -235,6 +236,13 @@ def isMouseWithinSpace(x, y, w, h):
 def mousePressed():
     global tab, begin, eind, sleep, amount, theme
     theme = ''
+    
+    if eind - begin < 1:
+        eind += 2
+    
+    if (eind - begin) < (amount * sleep):
+        eind += (amount * sleep) - (eind - begin)      
+        
     if isMouseWithinSpace(0, 0, 650, 70) and tab == "Extras":
         tab = "Controls"
     
