@@ -1,18 +1,13 @@
 {
-      "siege" : [
-            "R6S",
-            "Rainbow Bomb",
-            "Rainbow Hostage"
-      ],
       "cm": [
             "CM",
-            "CM-Wijnen",
-            "WatGoed"
+            "CM_Wijnen",
+            "CM_WatGoed"
       ],
       "mario": [
             "MARIO",
-            "Mario Time",
-            "Mario Help"
+            "Mario_Time",
+            "Mario_Tube"
       ],
       "bonzi": [
             "BONZI",
@@ -21,53 +16,58 @@
       ],
       "fvd": [
             "FVD",
-            "TB-Oikofobie",
-            "TB-Woeker"
+            "TB_Oikofobie",
+            "TB_Woeker"
       ],
       "mc": [
             "MC",
-            "Minecraft Click",
-            "Minecraft Sheep"
+            "Minecraft_Sheep",
+            "Minecraft_Click"
       ],
       "thanos": [
             "THANOS",
-            "Thanos Head",
-            "Thanos Choices"
+            "Thanos_Head",
+            "Thanos_Choices"
       ],
       "standaard": [
             "STANDAARD",
-            "Standard Bitflip",
-            "Standard Help"
+            "Standard_Bitflip",
+            "Standard_Help"
       ],
       "kerst": [
             "KERST",
-            "Christmas Bells",
-            "Christmas hohoho"
+            "Christmas_Bells",
+            "Christmas_hohoho"
       ],
       "kanye": [
             "KANYE",
-            "Ye-Good Morning",
-            "Ye-GAGA"
+            "Kanye_Good_Morning",
+            "Kanye_Gaga"
       ],
       "bc": [
             "BC",
-            "BC",
-            "BC Laugh"
+            "BC_Name",
+            "BC_Laugh"
       ],
       "youngdaggerdack": [
             "YOUNGDAGGERDACK",
-            "XXXTENTACION Spotlight Uh",
-            "XXXTENTACION - SAD!"
+            "XXXTENTACION_Spotlight",
+            "XXXTENTACION_SAD!"
       ],
       "honden": [
-            "",
-            "",
-            ""
+            "SHIBA",
+            "Shiba_Bark",
+            "Shiba_Growl"
       ],
       "wilco": [
-            "",
-            "",
-            ""
+            "WILCO",
+            "Wilco_Leeftijd",
+            "Wilco_Pools"
+      ],
+      "zelda": [
+	    "ZELDA",
+	    "Zelda_Item",
+	    "Zelda_Secret"
       ]
 }
 

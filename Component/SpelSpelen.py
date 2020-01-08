@@ -82,7 +82,7 @@ def check_time():
     global c_time
     if c_time in gl.event_times:
         fill(0)
-        gl.bitflip_sound.rewind()
+        gl.bitflip_sound.rewind() 
         gl.bitflip_sound.play()
         text('Bitflip!!', 60, 70)
         #het event word aangeroepen
