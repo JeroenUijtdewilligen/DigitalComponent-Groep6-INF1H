@@ -1,79 +1,15 @@
 {
-      "amount_of_events": 6,
-      "minimal_timer": 300,
-      "max_timer": 1200,
-      "colors": ["255-0-0", "0-255-0", "0-0-255", "0-0-0", "255-255-0", "255-255-255"],
-      "sleep": 120,
-      "active_theme": "kerst",
-      "siege" : [
-            "R6S",
-            "Rainbow Bomb",
-            "Rainbow Hostage"
-      ],
-      "cm": [
-            "CM",
-            "CM-Wijnen",
-            "WatGoed"
-      ],
-      "mario": [
-            "MARIO",
-            "Mario Time",
-            "Mario Help"
-      ],
-      "bonzi": [
-            "BONZI",
-            "Bonzi",
-            "Bonzi"
-      ],
-      "fvd": [
-            "FVD",
-            "TB-Oikofobie",
-            "TB-Woeker"
-      ],
-      "mc": [
-            "MC",
-            "Minecraft Click",
-            "Minecraft Sheep"
-      ],
-      "thanos": [
-            "THANOS",
-            "Thanos Head",
-            "Thanos Choices"
-      ],
-      "standaard": [
-            "STANDAARD",
-            "Standard Bitflip",
-            "Standard Help"
-      ],
-      "kerst": [
-            "KERST",
-            "Christmas Bells",
-            "Christmas hohoho"
-      ],
-      "kanye": [
-            "KANYE",
-            "Ye-Good Morning",
-            "Ye-GAGA"
-      ],
-      "bc": [
-            "BC",
-            "BC",
-            "BC Laugh"
-      ],
-      "youngdaggerdack": [
-            "YOUNGDAGGERDACK",
-            "XXXTENTACION Spotlight Uh",
-            "XXXTENTACION - SAD!"
-      ],
-      "honden": [
-            "",
-            "",
-            ""
-      ],
-      "wilco": [
-            "",
-            "",
-            ""
-      ]
+    "amount_of_events": 6, 
+    "colors": [
+        "255-0-0", 
+        "0-255-0", 
+        "0-0-255", 
+        "0-0-0", 
+        "255-255-0", 
+        "255-255-255"
+    ], 
+    "sleep": 120, 
+    "minimal_timer": 300, 
+    "active_theme": "standaard", 
+    "max_timer": 1200
 }
-

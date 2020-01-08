@@ -28,90 +28,87 @@ def mousePressed():
     if isMouseWithinSpace(700, 130, 250, 50):
         #standaard
         theme = 'standaard'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][1] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][2] + ".mp3")
+        change_theme('standaard')
+        
     if isMouseWithinSpace(960, 130, 250, 50):
         #random
         pass
+        
     if isMouseWithinSpace(700, 195, 250, 50):
         #big chungus
         theme = 'bc'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][1] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][2] + ".mp3")
+        change_theme('bc')
+        
     if isMouseWithinSpace(960, 195, 250, 50):
         #bonzibuddy
-        theme = 'bonzi'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][1] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][2] + ".mp3")
+        change_theme('bonzi')
+        
     if isMouseWithinSpace(700, 260, 250, 50):
         #meiland
         theme = 'mc'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('mc')
+        
     if isMouseWithinSpace(960, 260, 250, 50):
         #fvd
         theme = 'fvd'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('fvd')
+        
     if isMouseWithinSpace(700, 325, 250, 50):
         #kanye
         theme = 'kanye'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('kanye')
+        
     if isMouseWithinSpace(960, 325, 250, 50):
         #kerst
         theme = 'kerst'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('kerst')
 
     if isMouseWithinSpace(700, 390, 250, 50):
         #super mario
-        theme = 'kerst'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('mario')
+        
     if isMouseWithinSpace(960, 390, 250, 50):
         #minecraft
-        theme = 'mc'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        change_theme('mc')
+        
     if isMouseWithinSpace(700, 455, 250, 50):
         #rainbow 6 siege
         theme = 'siege'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][1] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][2] + ".mp3")
+        change_theme('siege')
+        
     if isMouseWithinSpace(960, 455, 250, 50):
         #thanos
-        theme = 'thanos'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-    if isMouseWithinSpace(700, 520, 250, 50):
-        pass
-        #wilco
+        change_theme('thanos')
+        
     if isMouseWithinSpace(960, 520, 250, 50):
-        #xxxtentacion
-        theme = 'youngdaggerdack'
-        gl.thema = loadImage("data/Thema" + gl.obj[theme][0] + ".png")
-        gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
-        gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.obj[theme][0] + ".mp3")
+        #xxxtentacion 
+        change_theme('youngdaggerdack')    
+        
+    if isMouseWithinSpace(700, 520, 250, 50):
+        #wilco
+        pass
+        
     if isMouseWithinSpace(700, 585, 250, 50):
         #zelda
         pass
+        
     if isMouseWithinSpace(960, 585, 250, 50):
         #shiba
         pass
+        
     else:
         return gl.scene
+    
+def write_json(theme):
+    gl.obj['active_theme'] = theme
+    with open('settings.json', 'w') as f:
+        gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
+    
+def change_theme(theme):
+    gl.thema = loadImage("data/Thema" + gl.themas[theme][0] + ".png")
+    gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][0] + ".mp3")
+    gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][0] + ".mp3")
+    write_json(theme)
     
 def keyPressed():
     global tab
