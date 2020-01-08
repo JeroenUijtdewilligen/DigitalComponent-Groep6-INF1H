@@ -39,7 +39,6 @@ def mousePressed():
         
     if isMouseWithinSpace(700, 195, 250, 50):
         #big chungus
-        theme = 'bc'
         change_theme('bc')
         
     if isMouseWithinSpace(960, 195, 250, 50):
@@ -48,22 +47,18 @@ def mousePressed():
         
     if isMouseWithinSpace(700, 260, 250, 50):
         #meiland
-        theme = 'cm'
         change_theme('cm')
         
     if isMouseWithinSpace(960, 260, 250, 50):
         #fvd
-        theme = 'fvd'
         change_theme('fvd')
         
     if isMouseWithinSpace(700, 325, 250, 50):
         #kanye
-        theme = 'kanye'
         change_theme('kanye')
         
     if isMouseWithinSpace(960, 325, 250, 50):
         #kerst
-        theme = 'kerst'
         change_theme('kerst')
 
     if isMouseWithinSpace(700, 390, 250, 50):
@@ -76,7 +71,6 @@ def mousePressed():
         
     if isMouseWithinSpace(700, 455, 250, 50):
         #rainbow 6 siege
-        theme = 'siege'
         change_theme('siege')
         
     if isMouseWithinSpace(960, 455, 250, 50):
@@ -89,15 +83,15 @@ def mousePressed():
         
     if isMouseWithinSpace(700, 520, 250, 50):
         #wilco
-        pass
+        change_theme('wilco')
         
     if isMouseWithinSpace(700, 585, 250, 50):
         #zelda
-        pass
+        change_theme('zelda')
         
     if isMouseWithinSpace(960, 585, 250, 50):
         #shiba
-        pass
+        change_theme('honden')
         
     #amount of events
     if isMouseWithinSpace(420, 190, 50, 50):
@@ -221,7 +215,7 @@ def draw():
         
         fill(0); text("Spelinstellingen", 320, 100)
         #save button
-        fill(0,255,0); rect(510, 100, 100, 50);fill(0); text("Save", 557, 142)
+        fill(0,255,0); rect(510, 100, 100, 50);fill(0); text("Save", 560, 138)
         
         #Divider
         line(640, 0, 640, 720)
@@ -340,7 +334,7 @@ def draw():
         if isMouseWithinSpace(960, 585, 250, 50):
             stroke(150)
         fill(255); rect(960, 585, 250, 50)
-        if gl.obj['active_theme'] == "shiba":
+        if gl.obj['active_theme'] == "honden":
             fill(0, 255, 0); rect(960, 585, 250, 50)
         fill(0); text("Shiba", 1085, 623)
         stroke(0)    

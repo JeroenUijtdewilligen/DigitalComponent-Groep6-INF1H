@@ -11,8 +11,8 @@
       ],
       "bonzi": [
             "BONZI",
-            "Bonzi",
-            "Bonzi"
+            "Bonzi_Bitflip",
+            "Bonzi_Laugh"
       ],
       "fvd": [
             "FVD",
@@ -68,6 +68,11 @@
 	    "ZELDA",
 	    "Zelda_Item",
 	    "Zelda_Secret"
+      ],
+      "siege": [
+	     "R6S",
+	     "Rainbow_Bomb",
+	     "Rainbow_Hostage"
       ]
 }
 
