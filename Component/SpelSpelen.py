@@ -1,4 +1,4 @@
-#alle libarys worden ingeladen
+#Alle nodige bestanden worden ingeladen.
 import Main_setup as gl
 import functions as f
 import time
@@ -38,7 +38,7 @@ def draw():
     image(gl.p4, 750, 380, 40, 40)
     image(gl.p1, 480, 650, 40, 40)
 
-    #er word gekeken of de timer op pause staat zo nee blijft de timer door lopen zo ja word de timer op 0 gezet (pauze)
+    #De tijd word berekend
     c_time = int(f.timer(gl.start)) - int(gl.rest)
     fill(0)
     text(str(f.time_convert(c_time)), 500, 70)
@@ -77,7 +77,8 @@ def draw():
     textSize(40)
     text('Help', 1211, 64)
     stroke(0)
-        
+
+#Bitflip geluidje word afgespeeld                
 def check_time():
     global c_time
     if c_time in gl.event_times:

@@ -1,3 +1,4 @@
+#Alle nodige bestanden worden ingeladen.
 import Main_setup as gl
 
 def setup():
@@ -8,172 +9,6 @@ def setup():
     begin = int(gl.obj['minimal_timer'] // 60)
     eind = int(gl.obj['max_timer'] // 60)
     sleep = int(gl.obj['sleep'] // 60)
-    
-def isMouseWithinSpace(x, y, w, h):
-    if x < mouseX < x + w and y < mouseY < y + h:
-        return True
-    else:
-        return False    
-    
-def mousePressed():
-    global tab, begin, eind, sleep, amount, theme
-    theme = ''
-    if isMouseWithinSpace(0, 0, 650, 70) and tab == "Extras":
-        tab = "Controls"
-    
-    if isMouseWithinSpace(641, 0, 650, 70) and tab == "Controls":
-        tab = "Extras"
-
-    if isMouseWithinSpace(1210, 650, 50, 50):
-        gl.scene = "Menu"
-        tab = "Controls"
-        return gl.scene
-
-    if isMouseWithinSpace(700, 130, 250, 50):
-        #standaard
-        change_theme('standaard')
-        
-    if isMouseWithinSpace(960, 130, 250, 50):
-        #random
-        change_theme('rand')
-        
-    if isMouseWithinSpace(700, 195, 250, 50):
-        #big chungus
-        change_theme('bc')
-        
-    if isMouseWithinSpace(960, 195, 250, 50):
-        #bonzibuddy
-        change_theme('bonzi')
-        
-    if isMouseWithinSpace(700, 260, 250, 50):
-        #meiland
-        change_theme('cm')
-        
-    if isMouseWithinSpace(960, 260, 250, 50):
-        #fvd
-        change_theme('fvd')
-        
-    if isMouseWithinSpace(700, 325, 250, 50):
-        #kanye
-        change_theme('kanye')
-        
-    if isMouseWithinSpace(960, 325, 250, 50):
-        #kerst
-        change_theme('kerst')
-
-    if isMouseWithinSpace(700, 390, 250, 50):
-        #super mario
-        change_theme('mario')
-        
-    if isMouseWithinSpace(960, 390, 250, 50):
-        #minecraft
-        change_theme('mc')
-        
-    if isMouseWithinSpace(700, 455, 250, 50):
-        #rainbow 6 siege
-        change_theme('siege')
-        
-    if isMouseWithinSpace(960, 455, 250, 50):
-        #thanos
-        change_theme('thanos')
-        
-    if isMouseWithinSpace(960, 520, 250, 50):
-        #xxxtentacion 
-        change_theme('youngdaggerdack')    
-        
-    if isMouseWithinSpace(700, 520, 250, 50):
-        #wilco
-        change_theme('wilco')
-        
-    if isMouseWithinSpace(700, 585, 250, 50):
-        #zelda
-        change_theme('zelda')
-        
-    if isMouseWithinSpace(960, 585, 250, 50):
-        #shiba
-        change_theme('honden')
-        
-    #amount of events
-    if isMouseWithinSpace(420, 190, 50, 50):
-        amount -= 1
-        if amount == 0:
-            amount += 1
-    if isMouseWithinSpace(550, 190, 50, 50):
-        amount += 1
-        
-    #min timer    
-    if isMouseWithinSpace(420, 330, 50, 50):
-        begin -= 1
-        if begin == 0:
-            begin += 1
-    if isMouseWithinSpace(550, 330, 50, 50):
-        begin += 1
-        
-    #max timer    
-    if isMouseWithinSpace(420, 470, 50, 50):
-        eind -= 1
-        if eind == 0:
-            eind += 1
-    if isMouseWithinSpace(550, 470, 50, 50):
-        eind += 1
-        
-    #sleep time    
-    if isMouseWithinSpace(420, 610, 50, 50):
-        sleep -=1
-        if sleep == 0:
-            sleep += 1
-    if isMouseWithinSpace(550, 610, 50, 50):
-        
-        sleep += 1
-    if isMouseWithinSpace(510, 100, 100, 50):
-         gl.obj['amount_of_events'] = amount
-         gl.obj['minimal_timer'] = begin * 60
-         gl.obj['max_timer'] = eind * 60
-         gl.obj['sleep'] = sleep * 60
-         with open('settings.json', 'w') as f:
-            gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
-                                    
-    else:
-        return gl.scene
-    
-def write_json(theme):
-    gl.obj['active_theme'] = theme
-    with open('settings.json', 'w') as f:
-        gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
-    
-def change_theme(theme):
-    
-    if theme == 'rand':
-        
-        k = gl.themas.keys()
-        k.sort()
-        theme = gl.random.choice(k)
-    
-    gl.thema = loadImage("data/Thema" + gl.themas[theme][0] + ".png")
-    gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][1] + ".mp3")
-    gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][2] + ".mp3")
-    write_json(theme)    
-    
-    
-    
-def keyPressed():
-    global tab
-    if key == CODED:
-        if keyCode == LEFT and tab == "Extras":
-            tab = "Controls"
-            return gl.scene
-        if keyCode == RIGHT and tab == "Controls":
-            tab = "Extras"
-            return gl.scene
-        else:
-            return gl.scene
-    if key == 'm':
-        gl.scene = "Menu"
-        tab = "Controls"
-        return gl.scene
-    else:
-        return gl.scene
-
 
 def draw():
     global tab
@@ -390,3 +225,170 @@ def draw():
     fill(0)
     text('M', 1236 , 691)
     stroke(0)
+
+def isMouseWithinSpace(x, y, w, h):
+    if x < mouseX < x + w and y < mouseY < y + h:
+        return True
+    else:
+        return False    
+    
+def mousePressed():
+    global tab, begin, eind, sleep, amount, theme
+    theme = ''
+    if isMouseWithinSpace(0, 0, 650, 70) and tab == "Extras":
+        tab = "Controls"
+    
+    if isMouseWithinSpace(641, 0, 650, 70) and tab == "Controls":
+        tab = "Extras"
+
+    if isMouseWithinSpace(1210, 650, 50, 50):
+        gl.scene = "Menu"
+        tab = "Controls"
+        return gl.scene
+
+    if isMouseWithinSpace(700, 130, 250, 50):
+        #standaard
+        change_theme('standaard')
+        
+    if isMouseWithinSpace(960, 130, 250, 50):
+        #random
+        change_theme('rand')
+        
+    if isMouseWithinSpace(700, 195, 250, 50):
+        #big chungus
+        change_theme('bc')
+        
+    if isMouseWithinSpace(960, 195, 250, 50):
+        #bonzibuddy
+        change_theme('bonzi')
+        
+    if isMouseWithinSpace(700, 260, 250, 50):
+        #meiland
+        change_theme('cm')
+        
+    if isMouseWithinSpace(960, 260, 250, 50):
+        #fvd
+        change_theme('fvd')
+        
+    if isMouseWithinSpace(700, 325, 250, 50):
+        #kanye
+        change_theme('kanye')
+        
+    if isMouseWithinSpace(960, 325, 250, 50):
+        #kerst
+        change_theme('kerst')
+
+    if isMouseWithinSpace(700, 390, 250, 50):
+        #super mario
+        change_theme('mario')
+        
+    if isMouseWithinSpace(960, 390, 250, 50):
+        #minecraft
+        change_theme('mc')
+        
+    if isMouseWithinSpace(700, 455, 250, 50):
+        #rainbow 6 siege
+        change_theme('siege')
+        
+    if isMouseWithinSpace(960, 455, 250, 50):
+        #thanos
+        change_theme('thanos')
+        
+    if isMouseWithinSpace(960, 520, 250, 50):
+        #xxxtentacion 
+        change_theme('youngdaggerdack')    
+        
+    if isMouseWithinSpace(700, 520, 250, 50):
+        #wilco
+        change_theme('wilco')
+        
+    if isMouseWithinSpace(700, 585, 250, 50):
+        #zelda
+        change_theme('zelda')
+        
+    if isMouseWithinSpace(960, 585, 250, 50):
+        #shiba
+        change_theme('honden')
+        
+    #amount of events + && - 
+    if isMouseWithinSpace(420, 190, 50, 50):
+        amount -= 1
+        if amount == 0:
+            amount += 1
+    if isMouseWithinSpace(550, 190, 50, 50):
+        amount += 1
+        
+    #start tijd + && -    
+    if isMouseWithinSpace(420, 330, 50, 50):
+        begin -= 1
+        if begin == 0:
+            begin += 1
+    if isMouseWithinSpace(550, 330, 50, 50):
+        begin += 1
+        
+    #eind tijd + && -      
+    if isMouseWithinSpace(420, 470, 50, 50):
+        eind -= 1
+        if eind == 0:
+            eind += 1
+    if isMouseWithinSpace(550, 470, 50, 50):
+        eind += 1
+
+    #tijd tussen events + && -       
+    if isMouseWithinSpace(420, 610, 50, 50):
+        sleep -=1
+        if sleep == 0:
+            sleep += 1
+    if isMouseWithinSpace(550, 610, 50, 50):
+        sleep += 1
+        
+    if isMouseWithinSpace(510, 100, 100, 50):
+         #Hier worden  de settings omgezet naar seconden en opgeslagen in settings.json 
+         gl.obj['amount_of_events'] = amount
+         gl.obj['minimal_timer'] = begin * 60
+         gl.obj['max_timer'] = eind * 60
+         gl.obj['sleep'] = sleep * 60
+         with open('settings.json', 'w') as f:
+            gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
+                                    
+    else:
+        return gl.scene
+
+#Deze functie checked welke key is ingedrukt en veranderd de scene waar nodig
+def keyPressed():
+    global tab
+    if key == CODED:
+        if keyCode == LEFT and tab == "Extras":
+            tab = "Controls"
+            return gl.scene
+        if keyCode == RIGHT and tab == "Controls":
+            tab = "Extras"
+            return gl.scene
+        else:
+            return gl.scene
+    if key == 'm':
+        gl.scene = "Menu"
+        tab = "Controls"
+        return gl.scene
+    else:
+        return gl.scene    
+            
+#Deze functie scrijft de settings naar een .json bestand
+def write_json(theme):
+    gl.obj['active_theme'] = theme
+    with open('settings.json', 'w') as f:
+        gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
+    
+#Deze functie varanderd het thema
+def change_theme(theme):
+    
+    if theme == 'rand':
+        
+        k = gl.themas.keys()
+        k.sort()
+        theme = gl.random.choice(k)
+    
+    gl.thema = loadImage("data/Thema" + gl.themas[theme][0] + ".png")
+    gl.bitflip_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][1] + ".mp3")
+    gl.help_sound = gl.minim.loadFile("SoundEffects/" + gl.themas[theme][2] + ".mp3")
+    write_json(theme)     

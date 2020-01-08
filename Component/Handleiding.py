@@ -1,16 +1,20 @@
+#Alle nodige bestanden worden ingeladen.
 import SpelSpelen, RepeatHulp
 import Main_setup as gl
+
 
 def setup():
     global page
     page = 1
-    
+
+        
 def isMouseWithinSpace(x, y, w, h):
     if x < mouseX < x + w and y < mouseY < y + h:
         return True
     else:
         return False
     
+#Checked welke key is ingedruct en navigeert naar de benodigde pagina
 def keyPressed():
     global page
     if key == CODED:
@@ -38,6 +42,7 @@ def keyPressed():
     else:
         return gl.scene
 
+#Check waar de muis geclicked heeft en switched de pagina als dat nodig is 
 def mousePressed():
     global page
     if isMouseWithinSpace(670, 640, 60, 60) and page < 9:
@@ -52,6 +57,7 @@ def mousePressed():
         page = 1
     if isMouseWithinSpace(1160, 40, 100, 72) and page >= 2 and page < 7:
         scene = "SpelSpelen"
+        #De timer word hier gestart en hij check gelijk of er rest tijd is 
         if gl.start == 0:
             gl.start = gl.time.time()
         else:
@@ -72,6 +78,7 @@ def mousePressed():
         return scene
             
 def draw():
+    #global variable worden geset
     global nextPageArrow, returnArrow, page, font, logo, bitflip0, bitflip1, bitflip2, bitflipX, repeatHulp0, repeatHulp1, repeatHulp2
     stroke(0)
     background(240)

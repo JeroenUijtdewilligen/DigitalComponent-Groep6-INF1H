@@ -1,3 +1,4 @@
+#Alle nodige bestanden worden ingeladen.
 import Handleiding
 import Main_setup as gl
 
@@ -14,7 +15,7 @@ def setup():
     output = 0
     
 def draw():
-    #formule
+    #De formule die berekend hoeveel vakjes en ingekleurd gaan worden
     output = 1 + repeat1 + (repeat2 * repeat1) + (repeat3 * (repeat2 * repeat1))
     
     #nice graphic stuff

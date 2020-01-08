@@ -1,3 +1,4 @@
+#Alle nodige bestanden worden ingeladen.
 import time
 import random
 import json
@@ -7,12 +8,13 @@ from pprint import pprint
 add_library('minim')
 from ddf.minim import Minim
 
+#alle benodigde variable worden global gezet
 def setup():
     global time, random, json, pprint
     global scene,nextPageArrow,returnArrow,page,font,scene,bitflip0,bitflip1,bitflip2,bitflipX
     global repeatHulp0,repeatHulp1,repeatHulp2,menu_font,achtergrond,imgboek,imgkaarten,imgrepeat,imglogo,menu_font,img,obj,p1,p2,p3,p4,bit,event_times,elapsed,time_snapshot,start,imgSettings,boldFont
     global thema, minim, bitflip_sound, help_sound,start,rest,file,themas
-#handleiding global varaibles
+
     
     tab = "Controls"
     nextPageArrow = loadImage("nextPageArrow.png")
@@ -45,25 +47,20 @@ def setup():
     img = loadImage("Achtergrondrepeat.png")
     
 #spelspelen global variables
- # fetch settings
+
+#settings.json && themas.json worden ingeladen     
     with open('settings.json', 'r') as a, open('themas.json', 'r') as b:
         c = a.read()
         d = b.read()
         obj = json.loads(c)
         themas = json.loads(d) 
-    
-    # with open('settings.json', 'r') as file:
-    #     data=file.read()
-    # obj = json.loads(data)
-    
-    # with open('themas.json', 'r') as f:
-    #     q=file.read()
-    # themas = json.loads(q)
-    
+        
     p1 = loadImage("spelspelen/p1.png")
     p2 = loadImage("spelspelen/p2.png")
     p3 = loadImage("spelspelen/p3.png")
     p4 = loadImage("spelspelen/p4.png")
+    
+    #de settings uit settings.json worden ingeladen 
     event_times = f.events(obj['amount_of_events'], obj['minimal_timer'], obj['max_timer'], obj['sleep']) #amount of events u want + #min wachttijd voor event
     bit = []
     start = 0                
@@ -71,10 +68,12 @@ def setup():
     rest = 0
     time_snapshot = 0
     start = 0
+    #Het benodigde thema word uit themas.json gehaald
     thema = loadImage("data/Thema" + themas[obj['active_theme']][0] + ".png")
     minim = Minim(this)
     bitflip_sound = minim.loadFile("SoundEffects/" + themas[obj['active_theme']][1] + ".mp3")
     help_sound = minim.loadFile("SoundEffects/" + themas[obj['active_theme']][2] + ".mp3")
+    
 #main global variables        
     scene = "Menu"
     

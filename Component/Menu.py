@@ -1,3 +1,4 @@
+#Alle nodige bestanden worden ingeladen.
 import SpelSpelen, RepeatHulp, Handleiding, Settings
 import Main_setup as gl
 

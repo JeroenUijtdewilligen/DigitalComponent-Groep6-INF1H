@@ -10,6 +10,6 @@
     ], 
     "sleep": 120, 
     "minimal_timer": 1200, 
-    "active_theme": "thanos", 
+    "active_theme": "standaard", 
     "max_timer": 1800
 }
