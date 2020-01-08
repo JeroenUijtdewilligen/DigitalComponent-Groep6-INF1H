@@ -237,8 +237,8 @@ def mousePressed():
     global tab, begin, eind, sleep, amount, theme
     theme = ''
     
-    if eind - begin < 1:
-        eind += 2
+    if eind - begin < 1 or eind == begin:
+        eind += 1
     
     if (eind - begin) < (amount * sleep):
         eind += (amount * sleep) - (eind - begin)      
