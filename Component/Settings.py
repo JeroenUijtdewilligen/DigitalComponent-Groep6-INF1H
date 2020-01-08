@@ -51,7 +51,8 @@ def draw():
         
         fill(0); text("Spelinstellingen", 320, 100)
         #save button
-        fill(0,255,0); rect(510, 100, 100, 50);fill(0); text("Save", 560, 138)
+        fill(0,255,0); rect(510, 100, 100, 50)
+        fill(0); text("Save", 560, 138)
         
         #Divider
         line(640, 0, 640, 720)
@@ -351,13 +352,18 @@ def mousePressed():
         sleep += 1
         
     if isMouseWithinSpace(510, 100, 100, 50):
-         #Hier worden  de settings omgezet naar seconden en opgeslagen in settings.json 
+        
+        #Hier worden  de settings omgezet naar seconden en opgeslagen in settings.json 
          gl.obj['amount_of_events'] = amount
          gl.obj['minimal_timer'] = begin * 60
          gl.obj['max_timer'] = eind * 60
          gl.obj['sleep'] = sleep * 60
+         
          with open('settings.json', 'w') as f:
             gl.json.dump(gl.obj, f, ensure_ascii=False, indent=4)
+            
+    if isMouseWithinSpace(0, 0, 0, 0):
+        pass        
                                     
     else:
         return gl.scene

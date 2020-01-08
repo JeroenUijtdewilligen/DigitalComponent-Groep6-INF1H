@@ -1,5 +1,5 @@
 {
-    "amount_of_events": 10, 
+    "amount_of_events": 12, 
     "colors": [
         "255-0-0", 
         "0-255-0", 
@@ -9,7 +9,7 @@
         "255-255-255"
     ], 
     "sleep": 60, 
-    "minimal_timer": 120, 
+    "minimal_timer": 180, 
     "active_theme": "standaard", 
-    "max_timer": 720
+    "max_timer": 1020
 }
